@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 4511453221983432}
   - component: {fileID: 95031749032475382}
   m_Layer: 0
-  m_Name: zhuanjiao
+  m_Name: Goc_Cua
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
