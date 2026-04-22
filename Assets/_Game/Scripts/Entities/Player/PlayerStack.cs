@@ -30,6 +30,11 @@ public class PlayerStack : MonoBehaviour
             Debug.Log("va chạm với cầu");
             PlaceBrick(other.gameObject);
         }
+
+        // if (other.CompareTag("Win"))
+        // {
+        //     GetComponent<PlayerMovement>().Win();
+        // }
     }
 
     // hàm xử lí va chạm khi nhặt miếng gỗ trên đường
@@ -45,8 +50,6 @@ public class PlayerStack : MonoBehaviour
         collectedBricks.Add(newBrick);
 
         modelPlayer.localPosition = Vector3.up * (collectedBricks.Count * brickHeight);
-
-        Debug.Log("Đã thêm gạch ");
     }
 
     // hàm xử lí va chạm khi đi qua cây cầu rỗng
@@ -65,7 +68,11 @@ public class PlayerStack : MonoBehaviour
            Transform brickChild = bridgeStepObj.transform.GetChild(0);
            MeshRenderer childMesh = brickChild.GetComponent<MeshRenderer>();
 
-           if (childMesh != null)
+            if (childMesh == null)
+            {
+                Debug.Log("<screen> lỗi ko tìm được");
+            }
+            if (childMesh != null)
             {
                 childMesh.enabled = true;
             }

@@ -1,2 +1,14 @@
 fileFormatVersion: 2
 guid: bcb6ffc8396b9fe4195db79c7c28155d
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - brickPrefab: {fileID: 1045506591760351, guid: f206ccc114e101b4dafffd4915d4a812, type: 3}
+  - obstaclePrefab: {fileID: 1121066348938118, guid: 680fafd85c16f024192891099b1460ee, type: 3}
+  - bridgePrefab: {fileID: 1765046182180127, guid: 2b1b6fa84e1873741b6c2efda43c58ef, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

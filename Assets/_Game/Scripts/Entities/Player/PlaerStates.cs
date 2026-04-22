@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class B
+public class PlayerStates
 {
     
 }

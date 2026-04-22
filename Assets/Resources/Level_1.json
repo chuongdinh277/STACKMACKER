@@ -1,0 +1,4775 @@
+{
+    "tiles": [
+        {
+            "x": 0.5,
+            "y": 0.0,
+            "z": -2.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "StartPoint",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 0.5,
+            "y": 0.0,
+            "z": -1.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 0.5,
+            "y": 0.0,
+            "z": -0.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 0.5,
+            "y": 0.0,
+            "z": 0.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 1.5,
+            "y": 0.0,
+            "z": -0.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 2.5,
+            "y": 0.0,
+            "z": 0.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 2.5,
+            "y": 0.0,
+            "z": 1.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 2.5,
+            "y": 0.0,
+            "z": 2.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 1.5,
+            "y": 0.0,
+            "z": 3.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": -0.5,
+            "y": 0.0,
+            "z": 1.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": -1.5,
+            "y": 0.0,
+            "z": 2.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": -1.5,
+            "y": 0.0,
+            "z": 3.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 0.5,
+            "y": 0.0,
+            "z": 5.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": -0.5,
+            "y": 0.0,
+            "z": 4.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 2.5,
+            "y": 0.0,
+            "z": 3.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 0.5,
+            "y": 0.0,
+            "z": 1.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": -1.5,
+            "y": 0.0,
+            "z": 1.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": -1.5,
+            "y": 0.0,
+            "z": 4.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 0.5,
+            "y": 0.0,
+            "z": 4.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 0.5,
+            "y": 0.0,
+            "z": 3.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 2.5,
+            "y": 0.0,
+            "z": -0.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 3.5,
+            "y": 0.0,
+            "z": 19.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 3.5,
+            "y": 0.0,
+            "z": 18.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 3.5,
+            "y": 0.0,
+            "z": 17.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 3.5,
+            "y": 0.0,
+            "z": 16.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 3.5,
+            "y": 0.0,
+            "z": 15.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 2.5,
+            "y": 0.0,
+            "z": 15.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 1.5,
+            "y": 0.0,
+            "z": 15.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": -0.5,
+            "y": 0.0,
+            "z": 15.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": -1.5,
+            "y": 0.0,
+            "z": 15.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": -2.5,
+            "y": 0.0,
+            "z": 15.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": -2.5,
+            "y": 0.0,
+            "z": 16.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": -2.5,
+            "y": 0.0,
+            "z": 17.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": -2.5,
+            "y": 0.0,
+            "z": 18.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": -2.5,
+            "y": 0.0,
+            "z": 19.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": -1.5,
+            "y": 0.0,
+            "z": 19.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": -1.5,
+            "y": 0.0,
+            "z": 18.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": -0.5,
+            "y": 0.0,
+            "z": 18.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 1.5,
+            "y": 0.0,
+            "z": 18.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 2.5,
+            "y": 0.0,
+            "z": 18.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 1.5,
+            "y": 0.0,
+            "z": 21.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 2.5,
+            "y": 0.0,
+            "z": 21.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 3.5,
+            "y": 0.0,
+            "z": 21.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 3.5,
+            "y": 0.0,
+            "z": 20.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 4.5,
+            "y": 0.0,
+            "z": 18.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 18.5,
+            "y": 0.0,
+            "z": 18.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 19.5,
+            "y": 0.0,
+            "z": 18.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 19.5,
+            "y": 0.0,
+            "z": 17.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 19.5,
+            "y": 0.0,
+            "z": 16.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 19.5,
+            "y": 0.0,
+            "z": 15.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 19.5,
+            "y": 0.0,
+            "z": 14.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 20.5,
+            "y": 0.0,
+            "z": 14.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 21.5,
+            "y": 0.0,
+            "z": 14.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 22.5,
+            "y": 0.0,
+            "z": 14.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 22.5,
+            "y": 0.0,
+            "z": 15.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 22.5,
+            "y": 0.0,
+            "z": 16.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 22.5,
+            "y": 0.0,
+            "z": 17.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 22.5,
+            "y": 0.0,
+            "z": 18.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 22.5,
+            "y": 0.0,
+            "z": 19.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 22.5,
+            "y": 0.0,
+            "z": 20.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 22.5,
+            "y": 0.0,
+            "z": 21.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 23.5,
+            "y": 0.0,
+            "z": 21.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 24.5,
+            "y": 0.0,
+            "z": 21.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 25.5,
+            "y": 0.0,
+            "z": 21.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 25.5,
+            "y": 0.0,
+            "z": 20.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 25.5,
+            "y": 0.0,
+            "z": 19.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 25.5,
+            "y": 0.0,
+            "z": 18.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 25.5,
+            "y": 0.0,
+            "z": 17.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 25.5,
+            "y": 0.0,
+            "z": 16.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 25.5,
+            "y": 0.0,
+            "z": 15.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 26.5,
+            "y": 0.0,
+            "z": 15.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 27.5,
+            "y": 0.0,
+            "z": 15.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 27.5,
+            "y": 0.0,
+            "z": 16.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 27.5,
+            "y": 0.0,
+            "z": 17.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 27.5,
+            "y": 0.0,
+            "z": 18.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 27.5,
+            "y": 0.0,
+            "z": 19.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 28.5,
+            "y": 0.0,
+            "z": 19.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 28.5,
+            "y": 0.0,
+            "z": 20.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 28.5,
+            "y": 0.0,
+            "z": 21.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 28.5,
+            "y": 0.0,
+            "z": 22.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Brick",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 0.5,
+            "y": 0.0,
+            "z": 13.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Untagged",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 0.5,
+            "y": 0.0,
+            "z": 14.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Untagged",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 0.5,
+            "y": 0.0,
+            "z": 15.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Untagged",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 0.5,
+            "y": 0.0,
+            "z": 16.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Untagged",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 0.5,
+            "y": 0.0,
+            "z": 17.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Untagged",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 0.5,
+            "y": 0.0,
+            "z": 18.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Untagged",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 0.5,
+            "y": 0.0,
+            "z": 19.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Untagged",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 0.5,
+            "y": 0.0,
+            "z": 20.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Untagged",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 0.5,
+            "y": 0.0,
+            "z": 21.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bricks",
+            "parentTag": "Untagged",
+            "layer": 5,
+            "childrenTags": [
+                "Brick",
+                "Untagged"
+            ]
+        },
+        {
+            "x": -2.5,
+            "y": 0.0,
+            "z": 5.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 6,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": -2.5,
+            "y": 0.0,
+            "z": 4.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 6,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": -2.5,
+            "y": 0.0,
+            "z": 3.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 6,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": -2.5,
+            "y": 0.0,
+            "z": 2.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 6,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": -2.5,
+            "y": 0.0,
+            "z": 1.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 6,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": -2.5,
+            "y": 0.0,
+            "z": 0.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 6,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": -2.5,
+            "y": 0.0,
+            "z": -0.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 6,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": -2.5,
+            "y": 0.0,
+            "z": -1.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 6,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": -2.5,
+            "y": 0.0,
+            "z": -2.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 6,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 3.5,
+            "y": 0.0,
+            "z": -2.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 6,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 3.5,
+            "y": 0.0,
+            "z": -1.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 6,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 3.5,
+            "y": 0.0,
+            "z": -0.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 6,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 3.5,
+            "y": 0.0,
+            "z": 0.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 6,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 3.5,
+            "y": 0.0,
+            "z": 1.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 6,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 3.5,
+            "y": 0.0,
+            "z": 2.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 6,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 3.5,
+            "y": 0.0,
+            "z": 3.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 6,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 3.5,
+            "y": 0.0,
+            "z": 4.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 6,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 3.5,
+            "y": 0.0,
+            "z": 5.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 6,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": -1.5,
+            "y": 0.0,
+            "z": 5.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 6,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": -0.5,
+            "y": 0.0,
+            "z": 5.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 6,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 1.5,
+            "y": 0.0,
+            "z": 5.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 6,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 2.5,
+            "y": 0.0,
+            "z": 5.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 6,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": -1.5,
+            "y": 0.0,
+            "z": -0.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 6,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": -0.5,
+            "y": 0.0,
+            "z": -0.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 6,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": -0.5,
+            "y": 0.0,
+            "z": -1.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 6,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": -0.5,
+            "y": 0.0,
+            "z": -2.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 6,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": -1.5,
+            "y": 0.0,
+            "z": -2.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 6,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": -1.5,
+            "y": 0.0,
+            "z": -1.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 6,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 1.5,
+            "y": 0.0,
+            "z": -1.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 6,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 1.5,
+            "y": 0.0,
+            "z": -2.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 6,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 2.5,
+            "y": 0.0,
+            "z": -1.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 6,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 2.5,
+            "y": 0.0,
+            "z": -2.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 6,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 1.5,
+            "y": 0.0,
+            "z": 0.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 6,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 1.5,
+            "y": 0.0,
+            "z": 1.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 6,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 1.5,
+            "y": 0.0,
+            "z": 2.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 6,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": -0.5,
+            "y": 0.0,
+            "z": 2.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 6,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 0.5,
+            "y": 0.0,
+            "z": 2.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 6,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": -0.5,
+            "y": 0.0,
+            "z": 3.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 6,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 1.5,
+            "y": 0.0,
+            "z": 4.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 6,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 2.5,
+            "y": 0.0,
+            "z": 4.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 6,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": -1.5,
+            "y": 0.0,
+            "z": 0.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 6,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": -0.5,
+            "y": 0.0,
+            "z": 0.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 6,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": -3.5,
+            "y": 0.0,
+            "z": 13.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": -2.5,
+            "y": 0.0,
+            "z": 13.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": -1.5,
+            "y": 0.0,
+            "z": 13.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": -0.5,
+            "y": 0.0,
+            "z": 13.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 1.5,
+            "y": 0.0,
+            "z": 13.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 3.5,
+            "y": 0.0,
+            "z": 13.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 2.5,
+            "y": 0.0,
+            "z": 13.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 4.5,
+            "y": 0.0,
+            "z": 13.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 4.5,
+            "y": 0.0,
+            "z": 14.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 4.5,
+            "y": 0.0,
+            "z": 15.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 4.5,
+            "y": 0.0,
+            "z": 16.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 4.5,
+            "y": 0.0,
+            "z": 17.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 4.5,
+            "y": 0.0,
+            "z": 20.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 4.5,
+            "y": 0.0,
+            "z": 19.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 4.5,
+            "y": 0.0,
+            "z": 21.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": -3.5,
+            "y": 0.0,
+            "z": 14.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": -3.5,
+            "y": 0.0,
+            "z": 15.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": -3.5,
+            "y": 0.0,
+            "z": 16.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": -3.5,
+            "y": 0.0,
+            "z": 17.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": -3.5,
+            "y": 0.0,
+            "z": 18.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": -3.5,
+            "y": 0.0,
+            "z": 19.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": -3.5,
+            "y": 0.0,
+            "z": 20.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": -3.5,
+            "y": 0.0,
+            "z": 21.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": -3.5,
+            "y": 0.0,
+            "z": 22.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": -2.5,
+            "y": 0.0,
+            "z": 22.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": -1.5,
+            "y": 0.0,
+            "z": 22.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": -0.5,
+            "y": 0.0,
+            "z": 22.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 1.5,
+            "y": 0.0,
+            "z": 22.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 2.5,
+            "y": 0.0,
+            "z": 22.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 3.5,
+            "y": 0.0,
+            "z": 22.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 4.5,
+            "y": 0.0,
+            "z": 22.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": -2.5,
+            "y": 0.0,
+            "z": 21.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": -2.5,
+            "y": 0.0,
+            "z": 20.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": -1.5,
+            "y": 0.0,
+            "z": 20.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": -1.5,
+            "y": 0.0,
+            "z": 21.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": -1.5,
+            "y": 0.0,
+            "z": 19.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": -0.5,
+            "y": 0.0,
+            "z": 19.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": -0.5,
+            "y": 0.0,
+            "z": 20.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": -0.5,
+            "y": 0.0,
+            "z": 21.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 1.5,
+            "y": 0.0,
+            "z": 20.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 1.5,
+            "y": 0.0,
+            "z": 19.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 2.5,
+            "y": 0.0,
+            "z": 19.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 2.5,
+            "y": 0.0,
+            "z": 20.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 1.5,
+            "y": 0.0,
+            "z": 17.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 1.5,
+            "y": 0.0,
+            "z": 16.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 2.5,
+            "y": 0.0,
+            "z": 16.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 2.5,
+            "y": 0.0,
+            "z": 17.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": -1.5,
+            "y": 0.0,
+            "z": 17.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": -1.5,
+            "y": 0.0,
+            "z": 16.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": -1.5,
+            "y": 0.0,
+            "z": 15.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": -0.5,
+            "y": 0.0,
+            "z": 16.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": -0.5,
+            "y": 0.0,
+            "z": 17.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": -1.5,
+            "y": 0.0,
+            "z": 14.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": -2.5,
+            "y": 0.0,
+            "z": 14.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": -0.5,
+            "y": 0.0,
+            "z": 14.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 1.5,
+            "y": 0.0,
+            "z": 14.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 2.5,
+            "y": 0.0,
+            "z": 14.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 3.5,
+            "y": 0.0,
+            "z": 14.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 18.5,
+            "y": 0.0,
+            "z": 19.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 18.5,
+            "y": 0.0,
+            "z": 17.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 18.5,
+            "y": 0.0,
+            "z": 16.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 18.5,
+            "y": 0.0,
+            "z": 15.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 18.5,
+            "y": 0.0,
+            "z": 14.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 18.5,
+            "y": 0.0,
+            "z": 13.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 18.5,
+            "y": 0.0,
+            "z": 20.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 18.5,
+            "y": 0.0,
+            "z": 21.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 29.5,
+            "y": 0.0,
+            "z": 13.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 29.5,
+            "y": 0.0,
+            "z": 14.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 29.5,
+            "y": 0.0,
+            "z": 15.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 29.5,
+            "y": 0.0,
+            "z": 16.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 29.5,
+            "y": 0.0,
+            "z": 17.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 29.5,
+            "y": 0.0,
+            "z": 18.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 29.5,
+            "y": 0.0,
+            "z": 19.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 29.5,
+            "y": 0.0,
+            "z": 20.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 29.5,
+            "y": 0.0,
+            "z": 21.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 18.5,
+            "y": 0.0,
+            "z": 22.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 19.5,
+            "y": 0.0,
+            "z": 22.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 20.5,
+            "y": 0.0,
+            "z": 22.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 21.5,
+            "y": 0.0,
+            "z": 22.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 22.5,
+            "y": 0.0,
+            "z": 22.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 23.5,
+            "y": 0.0,
+            "z": 22.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 24.5,
+            "y": 0.0,
+            "z": 22.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 25.5,
+            "y": 0.0,
+            "z": 22.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 26.5,
+            "y": 0.0,
+            "z": 22.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 27.5,
+            "y": 0.0,
+            "z": 22.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 29.5,
+            "y": 0.0,
+            "z": 22.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 19.5,
+            "y": 0.0,
+            "z": 13.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 20.5,
+            "y": 0.0,
+            "z": 13.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 21.5,
+            "y": 0.0,
+            "z": 13.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 22.5,
+            "y": 0.0,
+            "z": 13.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 23.5,
+            "y": 0.0,
+            "z": 13.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 24.5,
+            "y": 0.0,
+            "z": 13.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 25.5,
+            "y": 0.0,
+            "z": 13.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 26.5,
+            "y": 0.0,
+            "z": 13.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 27.5,
+            "y": 0.0,
+            "z": 13.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 28.5,
+            "y": 0.0,
+            "z": 13.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 19.5,
+            "y": 0.0,
+            "z": 21.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 19.5,
+            "y": 0.0,
+            "z": 20.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 19.5,
+            "y": 0.0,
+            "z": 19.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 20.5,
+            "y": 0.0,
+            "z": 19.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 20.5,
+            "y": 0.0,
+            "z": 20.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 20.5,
+            "y": 0.0,
+            "z": 21.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 21.5,
+            "y": 0.0,
+            "z": 21.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 21.5,
+            "y": 0.0,
+            "z": 20.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 21.5,
+            "y": 0.0,
+            "z": 19.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 21.5,
+            "y": 0.0,
+            "z": 18.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 21.5,
+            "y": 0.0,
+            "z": 17.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 21.5,
+            "y": 0.0,
+            "z": 16.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 20.5,
+            "y": 0.0,
+            "z": 16.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 20.5,
+            "y": 0.0,
+            "z": 15.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 21.5,
+            "y": 0.0,
+            "z": 15.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 20.5,
+            "y": 0.0,
+            "z": 17.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 20.5,
+            "y": 0.0,
+            "z": 18.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 23.5,
+            "y": 0.0,
+            "z": 20.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 24.5,
+            "y": 0.0,
+            "z": 20.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 24.5,
+            "y": 0.0,
+            "z": 19.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 24.5,
+            "y": 0.0,
+            "z": 18.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 24.5,
+            "y": 0.0,
+            "z": 17.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 24.5,
+            "y": 0.0,
+            "z": 16.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 24.5,
+            "y": 0.0,
+            "z": 15.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 24.5,
+            "y": 0.0,
+            "z": 14.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 23.5,
+            "y": 0.0,
+            "z": 14.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 23.5,
+            "y": 0.0,
+            "z": 15.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 23.5,
+            "y": 0.0,
+            "z": 16.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 23.5,
+            "y": 0.0,
+            "z": 17.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 23.5,
+            "y": 0.0,
+            "z": 18.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 23.5,
+            "y": 0.0,
+            "z": 19.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 25.5,
+            "y": 0.0,
+            "z": 14.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 26.5,
+            "y": 0.0,
+            "z": 14.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 27.5,
+            "y": 0.0,
+            "z": 14.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 28.5,
+            "y": 0.0,
+            "z": 14.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 28.5,
+            "y": 0.0,
+            "z": 15.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 28.5,
+            "y": 0.0,
+            "z": 16.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 28.5,
+            "y": 0.0,
+            "z": 17.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 28.5,
+            "y": 0.0,
+            "z": 18.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 26.5,
+            "y": 0.0,
+            "z": 16.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 26.5,
+            "y": 0.0,
+            "z": 17.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 26.5,
+            "y": 0.0,
+            "z": 18.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 26.5,
+            "y": 0.0,
+            "z": 19.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 26.5,
+            "y": 0.0,
+            "z": 20.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 26.5,
+            "y": 0.0,
+            "z": 21.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 27.5,
+            "y": 0.0,
+            "z": 21.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 27.5,
+            "y": 0.0,
+            "z": 20.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Wall",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 0.5,
+            "y": 0.0,
+            "z": 22.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Obstacles",
+            "parentTag": "Untagged",
+            "layer": 5,
+            "childrenTags": [
+                "Untagged",
+                "Untagged"
+            ]
+        },
+        {
+            "x": 0.5,
+            "y": 2.700000286102295,
+            "z": 6.5,
+            "rotX": 270.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bridges",
+            "parentTag": "BridgeStep",
+            "layer": 0,
+            "childrenTags": [
+                "BridgeStep"
+            ]
+        },
+        {
+            "x": 0.5,
+            "y": 2.700000286102295,
+            "z": 7.5,
+            "rotX": 270.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bridges",
+            "parentTag": "BridgeStep",
+            "layer": 0,
+            "childrenTags": [
+                "BridgeStep"
+            ]
+        },
+        {
+            "x": 0.5,
+            "y": 2.700000286102295,
+            "z": 8.5,
+            "rotX": 270.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bridges",
+            "parentTag": "BridgeStep",
+            "layer": 0,
+            "childrenTags": [
+                "BridgeStep"
+            ]
+        },
+        {
+            "x": 0.5,
+            "y": 2.700000047683716,
+            "z": 9.5,
+            "rotX": 270.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bridges",
+            "parentTag": "BridgeStep",
+            "layer": 0,
+            "childrenTags": [
+                "BridgeStep"
+            ]
+        },
+        {
+            "x": 0.5,
+            "y": 2.700000047683716,
+            "z": 10.5,
+            "rotX": 270.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bridges",
+            "parentTag": "BridgeStep",
+            "layer": 0,
+            "childrenTags": [
+                "BridgeStep"
+            ]
+        },
+        {
+            "x": 0.5,
+            "y": 2.700000047683716,
+            "z": 11.5,
+            "rotX": 270.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bridges",
+            "parentTag": "BridgeStep",
+            "layer": 0,
+            "childrenTags": [
+                "BridgeStep"
+            ]
+        },
+        {
+            "x": 0.5,
+            "y": 2.700000047683716,
+            "z": 12.5,
+            "rotX": 270.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bridges",
+            "parentTag": "BridgeStep",
+            "layer": 0,
+            "childrenTags": [
+                "BridgeStep"
+            ]
+        },
+        {
+            "x": 28.5,
+            "y": 2.700000047683716,
+            "z": 23.5,
+            "rotX": 270.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bridges",
+            "parentTag": "BridgeStep",
+            "layer": 0,
+            "childrenTags": [
+                "BridgeStep"
+            ]
+        },
+        {
+            "x": 28.5,
+            "y": 2.700000047683716,
+            "z": 24.5,
+            "rotX": 270.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bridges",
+            "parentTag": "BridgeStep",
+            "layer": 0,
+            "childrenTags": [
+                "BridgeStep"
+            ]
+        },
+        {
+            "x": 28.5,
+            "y": 2.700000047683716,
+            "z": 25.5,
+            "rotX": 270.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bridges",
+            "parentTag": "BridgeStep",
+            "layer": 0,
+            "childrenTags": [
+                "BridgeStep"
+            ]
+        },
+        {
+            "x": 28.5,
+            "y": 2.700000047683716,
+            "z": 26.5,
+            "rotX": 270.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bridges",
+            "parentTag": "BridgeStep",
+            "layer": 0,
+            "childrenTags": [
+                "BridgeStep"
+            ]
+        },
+        {
+            "x": 28.5,
+            "y": 2.700000047683716,
+            "z": 27.5,
+            "rotX": 270.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bridges",
+            "parentTag": "BridgeStep",
+            "layer": 0,
+            "childrenTags": [
+                "BridgeStep"
+            ]
+        },
+        {
+            "x": 28.5,
+            "y": 2.700000047683716,
+            "z": 28.5,
+            "rotX": 270.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bridges",
+            "parentTag": "BridgeStep",
+            "layer": 0,
+            "childrenTags": [
+                "BridgeStep"
+            ]
+        },
+        {
+            "x": 28.5,
+            "y": 2.700000047683716,
+            "z": 29.5,
+            "rotX": 270.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bridges",
+            "parentTag": "BridgeStep",
+            "layer": 0,
+            "childrenTags": [
+                "BridgeStep"
+            ]
+        },
+        {
+            "x": 28.5,
+            "y": 2.700000047683716,
+            "z": 30.5,
+            "rotX": 270.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bridges",
+            "parentTag": "BridgeStep",
+            "layer": 0,
+            "childrenTags": [
+                "BridgeStep"
+            ]
+        },
+        {
+            "x": 28.5,
+            "y": 2.700000047683716,
+            "z": 31.5,
+            "rotX": 270.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bridges",
+            "parentTag": "BridgeStep",
+            "layer": 0,
+            "childrenTags": [
+                "BridgeStep"
+            ]
+        },
+        {
+            "x": 28.5,
+            "y": 2.700000047683716,
+            "z": 32.5,
+            "rotX": 270.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bridges",
+            "parentTag": "BridgeStep",
+            "layer": 0,
+            "childrenTags": [
+                "BridgeStep"
+            ]
+        },
+        {
+            "x": 28.5,
+            "y": 2.700000047683716,
+            "z": 33.5,
+            "rotX": 270.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bridges",
+            "parentTag": "BridgeStep",
+            "layer": 0,
+            "childrenTags": [
+                "BridgeStep"
+            ]
+        },
+        {
+            "x": 28.5,
+            "y": 2.700000047683716,
+            "z": 34.5,
+            "rotX": 270.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bridges",
+            "parentTag": "BridgeStep",
+            "layer": 0,
+            "childrenTags": [
+                "BridgeStep"
+            ]
+        },
+        {
+            "x": 28.5,
+            "y": 2.700000047683716,
+            "z": 35.5,
+            "rotX": 270.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bridges",
+            "parentTag": "BridgeStep",
+            "layer": 0,
+            "childrenTags": [
+                "BridgeStep"
+            ]
+        },
+        {
+            "x": 28.5,
+            "y": 2.700000047683716,
+            "z": 36.5,
+            "rotX": 270.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Bridges",
+            "parentTag": "BridgeStep",
+            "layer": 0,
+            "childrenTags": [
+                "BridgeStep"
+            ]
+        },
+        {
+            "x": 5.5,
+            "y": 2.700000047683716,
+            "z": 18.5,
+            "rotX": 270.0,
+            "rotY": 90.0,
+            "rotZ": 0.0,
+            "type": "Bridges",
+            "parentTag": "BridgeStep",
+            "layer": 0,
+            "childrenTags": [
+                "BridgeStep"
+            ]
+        },
+        {
+            "x": 6.5,
+            "y": 2.700000047683716,
+            "z": 18.5,
+            "rotX": 270.0,
+            "rotY": 90.0,
+            "rotZ": 0.0,
+            "type": "Bridges",
+            "parentTag": "BridgeStep",
+            "layer": 0,
+            "childrenTags": [
+                "BridgeStep"
+            ]
+        },
+        {
+            "x": 7.5,
+            "y": 2.700000047683716,
+            "z": 18.5,
+            "rotX": 270.0,
+            "rotY": 90.0,
+            "rotZ": 0.0,
+            "type": "Bridges",
+            "parentTag": "BridgeStep",
+            "layer": 0,
+            "childrenTags": [
+                "BridgeStep"
+            ]
+        },
+        {
+            "x": 8.5,
+            "y": 2.700000047683716,
+            "z": 18.5,
+            "rotX": 270.0,
+            "rotY": 90.0,
+            "rotZ": 0.0,
+            "type": "Bridges",
+            "parentTag": "BridgeStep",
+            "layer": 0,
+            "childrenTags": [
+                "BridgeStep"
+            ]
+        },
+        {
+            "x": 9.5,
+            "y": 2.700000047683716,
+            "z": 18.5,
+            "rotX": 270.0,
+            "rotY": 90.0,
+            "rotZ": 0.0,
+            "type": "Bridges",
+            "parentTag": "BridgeStep",
+            "layer": 0,
+            "childrenTags": [
+                "BridgeStep"
+            ]
+        },
+        {
+            "x": 10.5,
+            "y": 2.700000047683716,
+            "z": 18.5,
+            "rotX": 270.0,
+            "rotY": 90.0,
+            "rotZ": 0.0,
+            "type": "Bridges",
+            "parentTag": "BridgeStep",
+            "layer": 0,
+            "childrenTags": [
+                "BridgeStep"
+            ]
+        },
+        {
+            "x": 11.5,
+            "y": 2.700000047683716,
+            "z": 18.5,
+            "rotX": 270.0,
+            "rotY": 90.0,
+            "rotZ": 0.0,
+            "type": "Bridges",
+            "parentTag": "BridgeStep",
+            "layer": 0,
+            "childrenTags": [
+                "BridgeStep"
+            ]
+        },
+        {
+            "x": 12.5,
+            "y": 2.700000047683716,
+            "z": 18.5,
+            "rotX": 270.0,
+            "rotY": 90.0,
+            "rotZ": 0.0,
+            "type": "Bridges",
+            "parentTag": "BridgeStep",
+            "layer": 0,
+            "childrenTags": [
+                "BridgeStep"
+            ]
+        },
+        {
+            "x": 13.5,
+            "y": 2.700000047683716,
+            "z": 18.5,
+            "rotX": 270.0,
+            "rotY": 90.0,
+            "rotZ": 0.0,
+            "type": "Bridges",
+            "parentTag": "BridgeStep",
+            "layer": 0,
+            "childrenTags": [
+                "BridgeStep"
+            ]
+        },
+        {
+            "x": 14.5,
+            "y": 2.700000047683716,
+            "z": 18.5,
+            "rotX": 270.0,
+            "rotY": 90.0,
+            "rotZ": 0.0,
+            "type": "Bridges",
+            "parentTag": "BridgeStep",
+            "layer": 0,
+            "childrenTags": [
+                "BridgeStep"
+            ]
+        },
+        {
+            "x": 15.5,
+            "y": 2.700000047683716,
+            "z": 18.5,
+            "rotX": 270.0,
+            "rotY": 90.0,
+            "rotZ": 0.0,
+            "type": "Bridges",
+            "parentTag": "BridgeStep",
+            "layer": 0,
+            "childrenTags": [
+                "BridgeStep"
+            ]
+        },
+        {
+            "x": 16.5,
+            "y": 2.700000047683716,
+            "z": 18.5,
+            "rotX": 270.0,
+            "rotY": 90.0,
+            "rotZ": 0.0,
+            "type": "Bridges",
+            "parentTag": "BridgeStep",
+            "layer": 0,
+            "childrenTags": [
+                "BridgeStep"
+            ]
+        },
+        {
+            "x": 17.5,
+            "y": 2.700000047683716,
+            "z": 18.5,
+            "rotX": 270.0,
+            "rotY": 90.0,
+            "rotZ": 0.0,
+            "type": "Bridges",
+            "parentTag": "BridgeStep",
+            "layer": 0,
+            "childrenTags": [
+                "BridgeStep"
+            ]
+        },
+        {
+            "x": 28.5,
+            "y": 0.0,
+            "z": 37.5,
+            "rotX": 0.0,
+            "rotY": 0.0,
+            "rotZ": 0.0,
+            "type": "Winpos",
+            "parentTag": "Win",
+            "layer": 0,
+            "childrenTags": [
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged",
+                "Untagged"
+            ]
+        }
+    ]
+}

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.XR;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -9,22 +10,43 @@ public class PlayerMovement : MonoBehaviour
     private bool isMoving = false;
     private Vector3 moveVec;
     private Animator anim;
+    private Istate currentState;
+    private PlayerMoveState moveState;
+    private PlayerWinState winState;
 
+    private readonly float rayDistance = 0.7f;
+    private readonly Vector3 rayOffset = Vector3.up * 0.5f;
     private void Start()
     {
         anim = GetComponentInChildren<Animator>();
-        InitStartPosition();
-        if (anim != null) anim.SetInteger("renwu", 1);
+
+        moveState = new PlayerMoveState(anim);
+        winState = new PlayerWinState(anim);
+        ChangePlayerState(moveState);
+        Invoke(nameof(InitStartPosition), 0.1f);
     }
     private void Update()
     {
+        if (currentState != null) currentState.OnExecute();
         HandleInput();
-        
         if (isMoving)
         {
             ExecuteMove();
         }
     }
+
+    
+    public void ChangePlayerState(Istate newState)
+    {
+        
+        if (currentState != null) 
+        {
+            if (currentState != newState) currentState.OnExit();
+        }
+        currentState = newState;
+        currentState.OnEnter();
+    }
+
     private void HandleInput()
     {
         if (Input.GetMouseButtonDown(0))
@@ -47,6 +69,8 @@ public class PlayerMovement : MonoBehaviour
                     moveVec = diff.y > 0 ? Vector3.forward : Vector3.back;
                 }
                 isMoving = true;
+                ChangePlayerState(moveState);
+                
             }
         }
     }
@@ -60,6 +84,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         transform.position += moveVec * speed * Time.deltaTime;
+        
     }
 
     private bool CheckObstacle()
@@ -93,6 +118,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 Vector3 realCenter = brickRenderer.bounds.center;
                 float topY = brickRenderer.bounds.max.y;
+                
                 transform.position = new Vector3(realCenter.x, topY, realCenter.z);
             }
         }
