@@ -1,5 +1,7 @@
 using System.Collections.Generic;
 using Mono.Cecil;
+using Unity.Mathematics;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerStack : MonoBehaviour
@@ -21,35 +23,30 @@ public class PlayerStack : MonoBehaviour
         }
         if (other.CompareTag("Brick"))
         {
-            Debug.Log("Va chạm với gạch!"); 
             PickUpBrick(other.gameObject);
         }
 
         if (other.CompareTag("BridgeStep"))
         {
-            Debug.Log("va chạm với cầu");
+            Debug.Log("đã va chạm với cầu");
             PlaceBrick(other.gameObject);
         }
-
-        // if (other.CompareTag("Win"))
-        // {
-        //     GetComponent<PlayerMovement>().Win();
-        // }
     }
 
-    // hàm xử lí va chạm khi nhặt miếng gỗ trên đường
     public void PickUpBrick(GameObject brickObj)
     {
-        if (!brickObj.activeSelf) return;
-        brickObj.SetActive(false);
+        Collider col = brickObj.GetComponent<Collider>();
 
-        GameObject newBrick = Instantiate(brickPrefab, stackParent);
+        if (col != null) col.enabled = false;
 
-        newBrick.transform.localPosition = Vector3.up * (collectedBricks.Count * brickHeight);
+        brickObj.transform.SetParent(stackParent);
 
-        collectedBricks.Add(newBrick);
+        brickObj.transform.localPosition = Vector3.up * (collectedBricks.Count * brickHeight);
+        //brickObj.transform.rotation = Quaternion.identity;
 
-        modelPlayer.localPosition = Vector3.up * (collectedBricks.Count * brickHeight);
+        collectedBricks.Add(brickObj);
+
+        UpdatePlayerHeight();
     }
 
     // hàm xử lí va chạm khi đi qua cây cầu rỗng
@@ -58,34 +55,31 @@ public class PlayerStack : MonoBehaviour
         if (collectedBricks.Count > 0)
         {
             int lastIndex = collectedBricks.Count - 1;
+
             GameObject brickToDrop = collectedBricks[lastIndex];
             collectedBricks.RemoveAt(lastIndex);
-            Destroy(brickToDrop);
 
-            modelPlayer.localPosition = Vector3.up * (collectedBricks.Count * brickHeight);
+            brickToDrop.transform.SetParent(bridgeStepObj.transform);
 
-
-           Transform brickChild = bridgeStepObj.transform.GetChild(0);
-           MeshRenderer childMesh = brickChild.GetComponent<MeshRenderer>();
-
-            if (childMesh != null)
-            {
-                childMesh.enabled = true;
-            }
-
-            bridgeStepObj.tag = "Untagged";
-
-            Collider bridgeCol = bridgeStepObj.GetComponent<Collider>();
-            if (bridgeCol != null)
-            {
-                bridgeCol.enabled = false;
-            }
+            brickToDrop.transform.localPosition = Vector3.zero;
+            brickToDrop.transform.localRotation = quaternion.identity;
         }
     }
 
+    private void UpdatePlayerHeight()
+    {
+        modelPlayer.localPosition = Vector3.up * (collectedBricks.Count * brickHeight);
+
+    }
     // hàm dùng để dọn dẹp số gạch đang có
     public void ClearStack()
     {
-        
+        foreach (GameObject brick in collectedBricks)
+        {
+            Destroy(brick);
+        }
+
+        collectedBricks.Clear();
+        UpdatePlayerHeight();
     }
 }
