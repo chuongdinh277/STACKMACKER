@@ -2,57 +2,65 @@ using UnityEngine;
 using UnityEditor;
 using System.IO;
 using System.Collections.Generic;
-using System.Linq;
+using UnityEngine.Tilemaps;
+
 public class MapExporter : EditorWindow
 {
     [MenuItem("StackMaker/Export Current Map")]
     public static void Export()
     {
         GameObject grid = GameObject.Find("Grid");
-
         if (grid == null)
         {
-            Debug.Log("false to find grid");
+            Debug.Log("Ko timf thay grid");
+            return;
         }
 
-        LevelData levelData = new LevelData();
+        LevelData leveldata = new LevelData();
+
+        bool foundStart = false;
 
         foreach (Transform category in grid.transform)
         {
-            if (category.name == "Ground 2") continue;
-
             foreach (Transform item in category)
             {
-                TileData t = new TileData();
-                t.x = Mathf.Floor(item.position.x) + 0.5f;
-                t.y = item.position.y;
-                t.z = Mathf.Floor(item.position.z) + 0.5f;
-                t.rotX = item.eulerAngles.x;
-                t.rotY = item.eulerAngles.y;
-                t.rotZ = item.eulerAngles.z;
-                t.type = category.name;
-                t.layer = item.gameObject.layer;
-                
-                t.parentTag = item.tag;
-
-                Transform[] allChildren = item.GetComponentsInChildren<Transform>(true);
-                for (int i = 1; i < allChildren.Length; i++) 
+                if (item.CompareTag("startPoint"))
                 {
-                    t.childrenTags.Add(allChildren[i].tag);
+                    leveldata.playerStartPos = item.position;
+                    foundStart = true;
                 }
 
-                levelData.tiles.Add(t);
+                TileData t = new TileData();
+                t.position = item.position;
+                t.rotation = item.eulerAngles;
+                t.type = category.name;
+                t.layer = item.gameObject.layer;
+                t.parentTag = item.tag;
+
+                t.childrenTags.Clear();
+
+                foreach (Transform child in item)
+                {
+                    t.childrenTags.Add(child.tag);
+                }
+
+                leveldata.tiles.Add(t);
             }
         }
 
-        string json = JsonUtility.ToJson(levelData, true);
-        string folderPath = Application.dataPath + "/Resources";
-        if (!Directory.Exists(folderPath)) Directory.CreateDirectory(folderPath);
 
-        File.WriteAllText(folderPath + "/Level_1.json", json);
-        AssetDatabase.Refresh();
-        
-        Debug.Log($"<color=yellow><b>SUCCESS:</b></color> Đã xuất {levelData.tiles.Count} ô vào Resources/Level_1.json");
+        if (! foundStart)
+        {
+            Debug.Log (" khong tim thay startpoint nao");
+        }
+        string path = EditorUtility.SaveFilePanel("Save file Json", "Assets/Resources", "Level_1", "json");
+
+        if (!string.IsNullOrEmpty(path))
+        {
+            string json = JsonUtility.ToJson(leveldata, true);
+            File.WriteAllText(path, json); 
+            AssetDatabase.Refresh();
+            Debug.Log($"<color=green><b>SUCCESS:</b></color> Đã xuất Level vào: {path}");
+        }
     }
-
 }

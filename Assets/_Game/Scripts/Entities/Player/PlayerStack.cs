@@ -68,10 +68,6 @@ public class PlayerStack : MonoBehaviour
            Transform brickChild = bridgeStepObj.transform.GetChild(0);
            MeshRenderer childMesh = brickChild.GetComponent<MeshRenderer>();
 
-            if (childMesh == null)
-            {
-                Debug.Log("<screen> lỗi ko tìm được");
-            }
             if (childMesh != null)
             {
                 childMesh.enabled = true;
