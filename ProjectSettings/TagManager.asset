@@ -9,6 +9,7 @@ TagManager:
   - BridgeStep
   - StartPoint
   - Win
+  - BrickCorner
   layers:
   - Default
   - TransparentFX

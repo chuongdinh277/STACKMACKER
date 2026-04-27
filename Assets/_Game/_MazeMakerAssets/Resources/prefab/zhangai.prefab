@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4585070549765595}
   - component: {fileID: 33150582636411261}
   - component: {fileID: 23054566729670232}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: zhangaikuai
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,7 +100,7 @@ GameObject:
   m_Component:
   - component: {fileID: 224902445786453919}
   - component: {fileID: 3760123798093205326}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: zhangai
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -160,7 +160,7 @@ GameObject:
   - component: {fileID: 4984315868566344}
   - component: {fileID: 33936381978010137}
   - component: {fileID: 23414351932707327}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: di
   m_TagString: Untagged
   m_Icon: {fileID: 0}

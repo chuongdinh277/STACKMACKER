@@ -1,7 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
-using UnityEditorInternal;
-using Unity.VisualScripting;
+
 
 public class LevelManager : MonoBehaviour
 {
@@ -11,6 +10,9 @@ public class LevelManager : MonoBehaviour
     [Header("Prefab Pool")]
     public List<PrefabMapping> prefabPool;
 
+    public static Dictionary<Vector3, TileData> worldMap = new Dictionary<Vector3, TileData>(); 
+
+    public static List<Vector3> stopPoints = new List<Vector3>();
     void Start()
     {
         GenerateLevel();
@@ -31,43 +33,46 @@ public class LevelManager : MonoBehaviour
             Destroy(child.gameObject);
         }
 
+        worldMap.Clear();
         LevelData data = JsonUtility.FromJson<LevelData>(jsonAsset.text);
 
         Dictionary<string, Transform> groups = new Dictionary<string, Transform>();
 
         foreach (TileData t in data.tiles)
         {
-            GameObject prefab =  prefabPool.Find(p => p.typeName == t.type).prefab;
-
-            if (prefab != null)
+            if (!worldMap.ContainsKey(t.position))
             {
-                
-                if (!groups.ContainsKey(t.type))
-                {
-                    GameObject g = new GameObject(t.type);
-                    g.transform.SetParent(this.transform);
-                    groups.Add(t.type, g.transform);
-                }
-
-                GameObject newTile = Instantiate(prefab, t.position, Quaternion.Euler(t.rotation));
-
-                newTile.name = prefab.name;
-                newTile.layer = t.layer;
-                newTile.tag = t.parentTag;
-                newTile.transform.SetParent(groups[t.type]);
-
-                Transform[] children = newTile.GetComponentsInChildren<Transform>(true);
-
-                for (int i = 1; i < children.Length; i++)
-                {
-                    if (i - 1 < t.childrenTags.Count)
-                    {
-                        children[i].tag = t.childrenTags[i - 1];
-                    }
-                }
-
-                newTile.isStatic = true;
+                worldMap.Add(t.position, t);
             }
+
+            var mapping =  prefabPool.Find(p => p.typeName == t.type);
+            if (mapping.prefab == null) continue;
+            GameObject prefab =  mapping.prefab;
+
+            if (!groups.ContainsKey(t.type))
+            {
+                GameObject g = new GameObject(t.type);
+                g.transform.SetParent(this.transform);
+                groups.Add(t.type, g.transform);
+            }
+
+            GameObject newTile = Instantiate(prefab, t.position, Quaternion.Euler(t.rotation));
+
+            newTile.name = prefab.name;
+            newTile.layer = t.layer;
+            newTile.tag = t.parentTag;
+            newTile.transform.SetParent(groups[t.type]);
+
+            Transform[] children = newTile.GetComponentsInChildren<Transform>(true);
+            for (int i = 1; i < children.Length; i++)
+            {
+                if (i - 1 < t.childrenTags.Count)
+                {
+                    children[i].tag = t.childrenTags[i - 1];
+                }
+            }
+
+            newTile.isStatic = true;
         }
 
         GameObject player = GameObject.FindGameObjectWithTag("Player");
@@ -79,9 +84,28 @@ public class LevelManager : MonoBehaviour
         } 
     }
 
+
+    public static void UpdateTileData (Vector3 pos,  string newType)
+    {
+        if (worldMap.ContainsKey(pos))
+        {
+            worldMap[pos].type = newType;
+        }
+    }
+
+
+    public static void RemoveTileData (Vector3 pos)
+    {
+        if (worldMap.ContainsKey(pos))
+        {
+            worldMap.Remove(pos);
+        }
+    }
+
     public void LoadNewLevel(string fileName)
     {
         levelFileName = fileName;
         GenerateLevel();
     }
+
 }

@@ -24,7 +24,7 @@ public class MapExporter : EditorWindow
         {
             foreach (Transform item in category)
             {
-                if (item.CompareTag("startPoint"))
+                if (item.CompareTag("StartPoint"))
                 {
                     leveldata.playerStartPos = item.position;
                     foundStart = true;

@@ -1,9 +1,7 @@
 using System.Collections.Generic;
-using Mono.Cecil;
-using Unity.Mathematics;
-using Unity.VisualScripting;
-using UnityEngine;
 
+using Unity.Mathematics;
+using UnityEngine;
 public class PlayerStack : MonoBehaviour
 {
 
@@ -11,9 +9,11 @@ public class PlayerStack : MonoBehaviour
     [SerializeField] private Transform stackParent;
     [SerializeField] private GameObject brickPrefab;
 
-    [SerializeField] private float brickHeight = 0.2f;
+    [SerializeField] private float brickHeight = 0.4f;
 
     private List<GameObject> collectedBricks = new List<GameObject>();
+
+    public int CollectedBrickCount => collectedBricks.Count;
     // hàm xử lí va chạm
     private void OnTriggerEnter(Collider other)
     {
@@ -31,6 +31,19 @@ public class PlayerStack : MonoBehaviour
             Debug.Log("đã va chạm với cầu");
             PlaceBrick(other.gameObject);
         }
+
+        if (other.CompareTag("BrickCorner"))
+        {
+            Debug.Log("va chạm với brickcorner");
+            PlayerMovement moveScript = GetComponent<PlayerMovement>();
+
+            if (moveScript != null && moveScript.IsMoving)
+            {
+                Vector3 cornerPos = other.transform.position;
+                transform.position = new Vector3(cornerPos.x, transform.position.y, cornerPos.z);
+                moveScript.Redirect(moveScript.MoveVec, cornerPos);
+            }
+        }
     }
 
     public void PickUpBrick(GameObject brickObj)
@@ -40,16 +53,14 @@ public class PlayerStack : MonoBehaviour
         if (col != null) col.enabled = false;
 
         brickObj.transform.SetParent(stackParent);
-
-        brickObj.transform.localPosition = Vector3.up * (collectedBricks.Count * brickHeight);
-        //brickObj.transform.rotation = Quaternion.identity;
+        brickObj.transform.localPosition = Vector3.up * (collectedBricks.Count * (brickHeight + 0.002f));
+        brickObj.transform.localEulerAngles = new Vector3(-90f, 0, -180f);
 
         collectedBricks.Add(brickObj);
-
         UpdatePlayerHeight();
+        LevelManager.RemoveTileData(brickObj.transform.position);
     }
 
-    // hàm xử lí va chạm khi đi qua cây cầu rỗng
     private void PlaceBrick(GameObject bridgeStepObj)
     {
         if (collectedBricks.Count > 0)
@@ -63,15 +74,18 @@ public class PlayerStack : MonoBehaviour
 
             brickToDrop.transform.localPosition = Vector3.zero;
             brickToDrop.transform.localRotation = quaternion.identity;
+
+            UpdatePlayerHeight();
+            LevelManager.UpdateTileData(bridgeStepObj.transform.position, "Bricks");
+            bridgeStepObj.tag = "Untagged";
         }
     }
 
     private void UpdatePlayerHeight()
     {
-        modelPlayer.localPosition = Vector3.up * (collectedBricks.Count * brickHeight);
-
+        float newY = collectedBricks.Count * brickHeight;
+        modelPlayer.localPosition = new Vector3(0, newY, 0);
     }
-    // hàm dùng để dọn dẹp số gạch đang có
     public void ClearStack()
     {
         foreach (GameObject brick in collectedBricks)
