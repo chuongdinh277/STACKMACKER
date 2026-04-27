@@ -14,7 +14,6 @@ public class PlayerStack : MonoBehaviour
     private List<GameObject> collectedBricks = new List<GameObject>();
 
     public int CollectedBrickCount => collectedBricks.Count;
-    // hàm xử lí va chạm
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("StartPoint"))
@@ -34,7 +33,14 @@ public class PlayerStack : MonoBehaviour
 
         if (other.CompareTag("BrickCorner"))
         {
-            Debug.Log("va chạm với brickcorner");
+            
+            Istate cornerState = other.GetComponent<Istate>();
+
+            if (cornerState != null)
+            {
+                cornerState.OnEnter();
+            }
+
             PlayerMovement moveScript = GetComponent<PlayerMovement>();
 
             if (moveScript != null && moveScript.IsMoving)
@@ -46,6 +52,18 @@ public class PlayerStack : MonoBehaviour
         }
     }
 
+    // private void OnTriggerExit(Collider other)
+    // {
+    //     if (other.CompareTag("BrickCorner"))
+    //     {
+    //         Istate cornerState = other.GetComponent<Istate>();
+
+    //         if (cornerState != null)
+    //         {
+    //             cornerState.OnExit();
+    //         }
+    //     }
+    // }
     public void PickUpBrick(GameObject brickObj)
     {
         Collider col = brickObj.GetComponent<Collider>();

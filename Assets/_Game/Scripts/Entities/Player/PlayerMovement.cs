@@ -101,8 +101,6 @@ public class PlayerMovement : MonoBehaviour
                 }
 
                 targetPos = FindNextStopPoint(transform.position, moveVec);
-                Debug.Log(targetPos);
-
                 targetPos = new Vector3(targetPos.x, transform.position.y, targetPos.z);
                 if (Vector3.Distance(transform.position, targetPos) > 0.1f)
                 {
@@ -238,7 +236,6 @@ public class PlayerMovement : MonoBehaviour
             Vector3 bridgePos = furthestBridgeHit.collider.transform.position;
             return new Vector3(bridgePos.x, currentCheckPos.y, bridgePos.z);
         }
-
         return currentCheckPos;
     }
 }
