@@ -40,7 +40,6 @@ public class PlayerStack : MonoBehaviour
             {
                 cornerState.OnEnter();
             }
-
             PlayerMovement moveScript = GetComponent<PlayerMovement>();
 
             if (moveScript != null && moveScript.IsMoving)
@@ -48,6 +47,17 @@ public class PlayerStack : MonoBehaviour
                 Vector3 cornerPos = other.transform.position;
                 transform.position = new Vector3(cornerPos.x, transform.position.y, cornerPos.z);
                 moveScript.Redirect(moveScript.MoveVec, cornerPos);
+            }
+        }
+
+        if (other.CompareTag("Win"))
+        {
+            Debug.Log("wingame");
+            PlayerMovement moveScript = GetComponent<PlayerMovement>();
+            if (moveScript != null)
+            {
+                Debug.Log("wingame thôi");
+                moveScript.TriggerWinEffects();
             }
         }
     }

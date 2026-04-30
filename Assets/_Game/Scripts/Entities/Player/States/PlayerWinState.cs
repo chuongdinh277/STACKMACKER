@@ -10,7 +10,11 @@ public class PlayerWinState : Istate
     }
     public void OnEnter()
     {
-        if (anim != null) anim.SetInteger("renwu", 2);
+        if (anim != null)
+        {
+            anim.SetInteger("renwu", 2);
+            anim.Play("Win", 0, 0f); 
+        }
     }
     public void OnExecute()
     {

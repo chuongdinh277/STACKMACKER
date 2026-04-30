@@ -1,5 +1,4 @@
 
-
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Tilemaps;
@@ -9,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float speed = 15f;
     [SerializeField] private LayerMask obstacleLayer;
     [SerializeField] private float boostSpeed = 20f;
-
+    [SerializeField] private Transform chestTransform;
     private float currentSpeed;
     private Vector3 mousePosDown;
     private bool isMoving = false;
@@ -26,6 +25,11 @@ public class PlayerMovement : MonoBehaviour
     private readonly Vector3 rayOffset = Vector3.up * 0.5f;
     private PlayerStack playerStack;
     
+    private bool  hasTriggeredWin = false;
+
+
+
+
     private void Start()
     {
         playerStack = GetComponent<PlayerStack>();
@@ -111,14 +115,21 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void ExecuteMove()
+   private void ExecuteMove()
     {
         RaycastHit hit;
         bool isOverBridge = false;
+        
         if (Physics.Raycast(transform.position + Vector3.up * 0.5f, Vector3.down, out hit, 1f))
         {
             if (hit.collider.CompareTag("BridgeStep")) isOverBridge = true;
+
+            if (hit.collider.CompareTag("Win") && !hasTriggeredWin)
+            {
+                TriggerWinEffects();
+            }
         }
+
         if (isOverBridge && playerStack.CollectedBrickCount <= 0)
         {
             transform.position = new Vector3(Mathf.Round(transform.position.x), transform.position.y, Mathf.Round(transform.position.z));
@@ -127,11 +138,18 @@ public class PlayerMovement : MonoBehaviour
         }
 
         transform.position = Vector3.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
-
         if (Vector3.Distance(transform.position, targetPos) < 0.01f)
         {
             transform.position = targetPos;
-            StopMoving();
+            
+            if (hasTriggeredWin)
+            {
+                FinalWinCelebration(); 
+            }
+            else
+            {
+                StopMoving();
+            }
         }
     }
 
@@ -173,19 +191,22 @@ public class PlayerMovement : MonoBehaviour
             }
         }
     }
-   private Vector3 FindNextStopPoint(Vector3 currentCheckPos, Vector3 direction)
+   
+    private Vector3 FindNextStopPoint(Vector3 currentCheckPos, Vector3 direction)
     {
         float maxDistance = 100f;
         RaycastHit[] hits = Physics.RaycastAll(currentCheckPos + Vector3.up * 0.5f, direction, maxDistance);
         
         RaycastHit closestStopHit = new RaycastHit();
         RaycastHit furthestBridgeHit = new RaycastHit(); 
-        
+        RaycastHit winPosHit = new RaycastHit();
+
         float minDistance = float.MaxValue;
         float maxBridgeDist = -1f;
         
         bool foundStop = false;
         bool foundBridge = false;
+        bool foundWin = false;
 
         foreach (RaycastHit hit in hits)
         {
@@ -197,8 +218,14 @@ public class PlayerMovement : MonoBehaviour
             bool mustStopAtBridge = isBridge && playerStack.CollectedBrickCount <= 0;
             bool isWinPos = hit.collider.CompareTag("Win");
 
-            if (isWinPos) Debug.Log("đã tìm thấy win");
-            if (isObstacle || isCorner || isWinPos || mustStopAtBridge)
+            if (isWinPos)
+            {
+                Debug.Log("đã tìm thấy win");
+                winPosHit = hit;
+                foundWin = true;
+                continue;
+            }
+            if (isObstacle || isCorner || mustStopAtBridge)
             {
                 if (hit.distance < minDistance)
                 {
@@ -219,6 +246,13 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
+        if (foundWin && chestTransform != null)
+        {
+            Debug.Log("lỗi tùm lum");
+            Vector3 stopBeforChest = chestTransform.position - direction * 0.8f;
+            return new Vector3(stopBeforChest.x, currentCheckPos.y, stopBeforChest.z);        
+        }
+
         if (foundStop)
         {
             Vector3 hitPos = closestStopHit.collider.transform.position;
@@ -237,5 +271,44 @@ public class PlayerMovement : MonoBehaviour
             return new Vector3(bridgePos.x, currentCheckPos.y, bridgePos.z);
         }
         return currentCheckPos;
+    }
+
+    public void TriggerWinEffects()
+    {
+        hasTriggeredWin = true;
+
+        if (playerStack != null) playerStack.ClearStack();
+
+        GameObject lihuaObj = GameObject.Find("lihua");
+        if (lihuaObj != null)
+        {
+            foreach (ParticleSystem ps in lihuaObj.GetComponentsInChildren<ParticleSystem>())
+            {
+                ps.Play();
+            }
+        }
+    }
+
+    private void FinalWinCelebration()
+    {
+        isMoving = false;
+        moveVec = Vector3.zero;
+        hasTriggeredWin = false;
+
+        if (chestTransform != null)
+        {
+            Vector3 lookDir = (chestTransform.position - transform.position).normalized;
+            lookDir.y = 0;
+            if (lookDir != Vector3.zero)
+            {
+                transform.rotation = Quaternion.Euler(0, 180, 0);
+            }
+        }
+        ChangePlayerState(winState);
+        if (anim != null)
+        {
+            anim.SetInteger("renwu", 2);
+            anim.Play("Take 3", 0, 0f);
+        }
     }
 }

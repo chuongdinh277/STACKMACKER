@@ -22817,7 +22817,7 @@ GameObject:
   - component: {fileID: 2242387877475081131}
   m_Layer: 0
   m_Name: winpos
-  m_TagString: Untagged
+  m_TagString: Win
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22919,12 +22919,12 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 4, z: 1}
-  m_Center: {x: 0, y: 1.5, z: 0}
+  m_Size: {x: 1, y: 4, z: 3}
+  m_Center: {x: 0, y: 1.5, z: 5}
 --- !u!1 &1382597685722805
 GameObject:
   m_ObjectHideFlags: 0
@@ -26185,7 +26185,7 @@ GameObject:
   - component: {fileID: 4508361985574830}
   m_Layer: 0
   m_Name: lihua
-  m_TagString: Untagged
+  m_TagString: lihua
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40919,7 +40919,7 @@ Transform:
   m_GameObject: {fileID: 1872084638018618}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0, z: 0.229}
+  m_LocalPosition: {x: 0, y: 0.01, z: 0.229}
   m_LocalScale: {x: 0.3000005, y: 0.30000025, z: 0.30000025}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -43454,7 +43454,6 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c1e9e5a7d21bf8b4d949d5f9b970fdbb, type: 2}
   - {fileID: 2100000, guid: c1e9e5a7d21bf8b4d949d5f9b970fdbb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0

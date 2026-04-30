@@ -10,6 +10,7 @@ TagManager:
   - StartPoint
   - Win
   - BrickCorner
+  - lihua
   layers:
   - Default
   - TransparentFX
