@@ -1,5 +1,6 @@
 
 using Unity.VisualScripting;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.XR;
@@ -8,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float speed = 15f;
     [SerializeField] private LayerMask obstacleLayer;
     [SerializeField] private float boostSpeed = 20f;
-    [SerializeField] private Transform chestTransform;
+    private Transform chestTransform;
     private float currentSpeed;
     private Vector3 mousePosDown;
     private bool isMoving = false;
@@ -26,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
     private PlayerStack playerStack;
     
     private bool  hasTriggeredWin = false;
+    private Direct currentDirect = Direct.None;
 
 
 
@@ -37,10 +39,26 @@ public class PlayerMovement : MonoBehaviour
 
         moveState = new PlayerMoveState(anim);
         winState = new PlayerWinState(anim);
-        ChangePlayerState(moveState);
-        targetPos = transform.position;
         
-        Invoke(nameof(InitStartPosition), 0.1f);
+        OnInit();
+    }
+
+    public void OnInit()
+    {
+        isMoving = false; 
+        moveVec = Vector3.zero; 
+        targetPos = transform.position;
+        hasTriggeredWin = false;
+        currentDirect = Direct.None;
+
+        transform.rotation = Quaternion.identity;
+
+        ChangePlayerState(moveState);
+        mousePosDown = Input.mousePosition;
+        Invoke(nameof(ExecuteInit), 0.1f);
+
+       
+
     }
     private void Update()
     {
@@ -62,6 +80,7 @@ public class PlayerMovement : MonoBehaviour
         currentState.OnEnter();
     }
     public void Redirect(Vector3 direction, Vector3 cornerPosition)
+
     {
         Vector3[] checkDirection = {Vector3.forward, Vector3.back, Vector3.left, Vector3.right};
 
@@ -80,6 +99,21 @@ public class PlayerMovement : MonoBehaviour
         }
         isMoving = false;
     }
+    public void TriggerWinEffects()
+    {
+        hasTriggeredWin = true;
+
+        if (playerStack != null) playerStack.ClearStack();
+
+        GameObject lihuaObj = GameObject.Find("lihua");
+        if (lihuaObj != null)
+        {
+            foreach (ParticleSystem ps in lihuaObj.GetComponentsInChildren<ParticleSystem>())
+            {
+                ps.Play();
+            }
+        }
+    }
     private void HandleInput()
     {
         if (isMoving) return;
@@ -97,12 +131,13 @@ public class PlayerMovement : MonoBehaviour
             {
                 if (Mathf.Abs(diff.x) > Mathf.Abs(diff.y))
                 {
-                    moveVec = diff.x > 0 ? Vector3.right : Vector3.left;
+                    currentDirect = diff.x > 0 ? Direct.Right : Direct.Left;
                 }
                 else
                 {
-                    moveVec = diff.y > 0 ? Vector3.forward : Vector3.back;
+                    currentDirect = diff.y > 0 ? Direct.Forward : Direct.Back;
                 }
+                moveVec = GetVectorFromDirect(currentDirect);
 
                 targetPos = FindNextStopPoint(transform.position, moveVec);
                 targetPos = new Vector3(targetPos.x, transform.position.y, targetPos.z);
@@ -114,8 +149,33 @@ public class PlayerMovement : MonoBehaviour
             }
         }
     }
-
-   private void ExecuteMove()
+    
+    private void ExecuteInit()
+    {
+         GameObject startPoint = GameObject.FindGameObjectWithTag("StartPoint");
+        
+        if (startPoint != null)
+        {
+            
+            Renderer brickRenderer = startPoint.GetComponentInChildren<Renderer>();
+            if (brickRenderer != null)
+            {
+                Vector3 realCenter = brickRenderer.bounds.center;
+                float topY = brickRenderer.bounds.max.y;
+                Vector3 spawnPos = new Vector3(realCenter.x, topY, realCenter.z);
+            
+                transform.position = spawnPos;
+                
+                targetPos = spawnPos;
+                
+            }
+        }
+        else
+        {
+            Debug.Log("Null");
+        }
+    }
+    private void ExecuteMove()
     {
         RaycastHit hit;
         bool isOverBridge = false;
@@ -152,17 +212,6 @@ public class PlayerMovement : MonoBehaviour
             }
         }
     }
-
-    private bool CheckObstacle()
-    {
-        RaycastHit hit;
-        if (Physics.Raycast(transform.position + Vector3.up * 0.5f, moveVec, out hit, 0.7f, obstacleLayer))
-        {
-            return true;
-        }
-        return false;
-    }
-
     private void StopMoving()
     {
         float snapX = Mathf.Floor(transform.position.x * 2.0f) / 2.0f;
@@ -177,20 +226,7 @@ public class PlayerMovement : MonoBehaviour
         moveVec = Vector3.zero;
         mousePosDown = Input.mousePosition; 
     }
-    private void InitStartPosition()
-    {
-        GameObject startPoint = GameObject.FindGameObjectWithTag("StartPoint");
-        if (startPoint != null)
-        {
-            Renderer brickRenderer = startPoint.GetComponentInChildren<Renderer>();
-            if (brickRenderer != null)
-            {
-                Vector3 realCenter = brickRenderer.bounds.center;
-                float topY = brickRenderer.bounds.max.y;
-                transform.position = new Vector3(realCenter.x, topY, realCenter.z);
-            }
-        }
-    }
+
    
     private Vector3 FindNextStopPoint(Vector3 currentCheckPos, Vector3 direction)
     {
@@ -207,7 +243,8 @@ public class PlayerMovement : MonoBehaviour
         bool foundStop = false;
         bool foundBridge = false;
         bool foundWin = false;
-
+        bool foundChest = false;
+        RaycastHit chestHit = new RaycastHit();
         foreach (RaycastHit hit in hits)
         {
             if (hit.distance < 0.5f) continue;
@@ -217,10 +254,20 @@ public class PlayerMovement : MonoBehaviour
             bool isBridge = hit.collider.CompareTag("BridgeStep");
             bool mustStopAtBridge = isBridge && playerStack.CollectedBrickCount <= 0;
             bool isWinPos = hit.collider.CompareTag("Win");
+            bool isChest = hit.collider.CompareTag("Chest");
 
+            if (isChest)
+            {
+                if (hit.distance < minDistance)
+                {
+                    minDistance = hit.distance;
+                    chestHit = hit;
+                    foundChest = true;
+                }
+                continue; 
+            }
             if (isWinPos)
             {
-                Debug.Log("đã tìm thấy win");
                 winPosHit = hit;
                 foundWin = true;
                 continue;
@@ -244,13 +291,15 @@ public class PlayerMovement : MonoBehaviour
                     foundBridge = true;
                 }
             }
+
         }
 
-        if (foundWin && chestTransform != null)
+        if (foundChest)
         {
-            Debug.Log("lỗi tùm lum");
-            Vector3 stopBeforChest = chestTransform.position - direction * 0.8f;
-            return new Vector3(stopBeforChest.x, currentCheckPos.y, stopBeforChest.z);        
+            chestTransform = chestHit.collider.transform;
+            Vector3 chestPos = chestHit.collider.transform.position;
+            Vector3 stopPos = new Vector3(chestPos.x - direction.x * 0.8f, currentCheckPos.y, chestPos.z - direction.z * 0.8f);
+            return stopPos;      
         }
 
         if (foundStop)
@@ -259,36 +308,26 @@ public class PlayerMovement : MonoBehaviour
 
             bool hitIsObstacle = ((1 << closestStopHit.collider.gameObject.layer) & obstacleLayer) != 0;
             
+            Vector3 result;
             if (hitIsObstacle) 
             {
-                return new Vector3(hitPos.x - direction.x, currentCheckPos.y, hitPos.z - direction.z);
+                result = new Vector3(hitPos.x - direction.x, currentCheckPos.y, hitPos.z - direction.z);
             }
-            return new Vector3(hitPos.x, currentCheckPos.y, hitPos.z);
+            else
+            {
+                result = new Vector3(hitPos.x, currentCheckPos.y, hitPos.z);
+            }
+            return result;
         }
         if (foundBridge)
         {
             Vector3 bridgePos = furthestBridgeHit.collider.transform.position;
-            return new Vector3(bridgePos.x, currentCheckPos.y, bridgePos.z);
+            
+            Vector3 result = new Vector3(bridgePos.x, currentCheckPos.y, bridgePos.z);
+            return result;
         }
         return currentCheckPos;
     }
-
-    public void TriggerWinEffects()
-    {
-        hasTriggeredWin = true;
-
-        if (playerStack != null) playerStack.ClearStack();
-
-        GameObject lihuaObj = GameObject.Find("lihua");
-        if (lihuaObj != null)
-        {
-            foreach (ParticleSystem ps in lihuaObj.GetComponentsInChildren<ParticleSystem>())
-            {
-                ps.Play();
-            }
-        }
-    }
-
     private void FinalWinCelebration()
     {
         isMoving = false;
@@ -305,10 +344,24 @@ public class PlayerMovement : MonoBehaviour
             }
         }
         ChangePlayerState(winState);
-        if (anim != null)
+
+        if (LevelManager.Instance != null)
         {
-            anim.SetInteger("renwu", 2);
-            anim.Play("Take 3", 0, 0f);
+            LevelManager.Instance.NextLevel();
         }
     }
+
+    private Vector3 GetVectorFromDirect(Direct dir)
+    {
+        switch(dir)
+        {
+            case Direct.Forward : return Vector3.forward;
+            case Direct.Right : return Vector3.right;
+            case Direct.Left : return Vector3.left;
+            case Direct.Back : return Vector3.back;
+            default: return Vector3.zero;
+        }
+    }
+
+   
 }
