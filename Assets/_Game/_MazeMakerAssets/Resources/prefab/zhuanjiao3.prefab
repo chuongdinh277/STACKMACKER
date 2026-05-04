@@ -338,7 +338,7 @@ GameObject:
   - component: {fileID: 224026336513668144}
   m_Layer: 5
   m_Name: zhuanjiao3
-  m_TagString: Untagged
+  m_TagString: BrickCorner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
