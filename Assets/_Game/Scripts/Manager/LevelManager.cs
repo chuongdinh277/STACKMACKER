@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
 
 
@@ -13,18 +14,35 @@ public class LevelManager : MonoBehaviour
     public static Dictionary<Vector3, TileData> worldMap = new Dictionary<Vector3, TileData>(); 
 
     public static List<Vector3> stopPoints = new List<Vector3>();
+
+    public static LevelManager Instance;
+
+    [Header("Manual References")]
+    public PlayerMovement playerMovement; 
+    public PlayerStack playerStack;
     void Start()
     {
         GenerateLevel();
     }
 
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
     public void GenerateLevel()
     {
-        TextAsset jsonAsset = Resources.Load<TextAsset>(levelFileName);
+        string currentFileName = "Level_" + GameManager.Instance.currentLevel;
+        TextAsset jsonAsset = Resources.Load<TextAsset>(currentFileName);
 
         if (jsonAsset == null)
         {
-            Debug.LogError($"[LevelManager] Không tìm thấy file {levelFileName} trong Resources!");
             return;
         }
 
@@ -34,9 +52,17 @@ public class LevelManager : MonoBehaviour
         }
 
         worldMap.Clear();
+
+        if (UIManager.Instance != null)
+        {
+            UIManager.Instance.UpdateCurrentLevel(GameManager.Instance.currentLevel);
+        }
+
         LevelData data = JsonUtility.FromJson<LevelData>(jsonAsset.text);
 
-        Dictionary<string, Transform> groups = new Dictionary<string, Transform>();
+        Dictionary<TileType, Transform> groups = new Dictionary<TileType, Transform>();
+
+        GameObject startPointObj = null;
 
         foreach (TileData t in data.tiles)
         {
@@ -45,47 +71,59 @@ public class LevelManager : MonoBehaviour
                 worldMap.Add(t.position, t);
             }
 
-            var mapping =  prefabPool.Find(p => p.typeName == t.type);
+            var mapping =  prefabPool.Find(p => p.type == t.type);
             if (mapping.prefab == null) continue;
+
+            
+
+
             GameObject prefab =  mapping.prefab;
 
             if (!groups.ContainsKey(t.type))
             {
-                GameObject g = new GameObject(t.type);
+                GameObject g = new GameObject(t.type.ToString());
                 g.transform.SetParent(this.transform);
                 groups.Add(t.type, g.transform);
             }
 
-            GameObject newTile = Instantiate(prefab, t.position, Quaternion.Euler(t.rotation));
+            GameObject newTile = Instantiate(mapping.prefab, t.position, Quaternion.Euler(t.rotation));
 
-            newTile.name = prefab.name;
+            if (t.type == TileType.StartPoint)
+            {
+                startPointObj = newTile;
+            }
+
+            newTile.name = mapping.prefab.name;
             newTile.layer = t.layer;
-            newTile.tag = t.parentTag;
+
+
+
+            if (!string.IsNullOrEmpty(t.parentTag)) 
+            {
+                newTile.tag = t.parentTag;
+            }
+
+
             newTile.transform.SetParent(groups[t.type]);
 
+
+            
             Transform[] children = newTile.GetComponentsInChildren<Transform>(true);
             for (int i = 1; i < children.Length; i++)
             {
-                if (i - 1 < t.childrenTags.Count)
+                if (i - 1 < t.childrenTags.Count && !string.IsNullOrEmpty(t.childrenTags[i - 1]))
                 {
                     children[i].tag = t.childrenTags[i - 1];
                 }
             }
-
             newTile.isStatic = true;
         }
 
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
-
-        if (player != null && data.playerStartPos != Vector3.zero)
-        {
-            player.transform.position = data.playerStartPos + Vector3.up * 1.0f;
-            Debug.Log("<color=cyan>Player đã vào vị trí xuất phát!</color>");
-        } 
+        DelayedSetup();
     }
 
 
-    public static void UpdateTileData (Vector3 pos,  string newType)
+    public static void UpdateTileData (Vector3 pos,  TileType newType)
     {
         if (worldMap.ContainsKey(pos))
         {
@@ -108,4 +146,27 @@ public class LevelManager : MonoBehaviour
         GenerateLevel();
     }
 
+    public void NextLevel()
+    {
+        Invoke(nameof(ExecuteNextLevel), 2f);
+    }
+
+    private void ExecuteNextLevel()
+    {
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.currentLevel++;
+
+            GenerateLevel();
+
+        }
+    }
+    private void DelayedSetup()
+    {
+        if (playerMovement != null && playerStack != null)
+        {
+            playerStack.ClearStack();
+            playerMovement.OnInit();
+        }
+    }
 }
