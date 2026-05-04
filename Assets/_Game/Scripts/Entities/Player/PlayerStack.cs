@@ -2,6 +2,7 @@ using System.Collections.Generic;
 
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.EventSystems;
 public class PlayerStack : MonoBehaviour
 {
 
@@ -14,8 +15,31 @@ public class PlayerStack : MonoBehaviour
     private List<GameObject> collectedBricks = new List<GameObject>();
 
     public int CollectedBrickCount => collectedBricks.Count;
+
     private void OnTriggerEnter(Collider other)
     {
+
+        // Tile tile = other.GetComponent<Tile>();
+        // if (tile == null) return;
+
+        // switch (tile.type)
+        // {
+        //     case TileType.Brick:
+        //         PickUpBrick(other.gameObject);
+        //         break;
+        //     case TileType.BridgeStep:
+        //         PlaceBrick(other.gameObject);
+        //         break;
+        //     case TileType.BrickCorner:
+        //         HandleCorner(other);
+        //         break;
+        //     case TileType.Win:
+        //         GetComponent<PlayerMovement>().TriggerWinEffects();
+        //         break;
+        //     case TileType.StartPoint:
+        //         PickUpBrick(other.gameObject);
+        //         break;
+        // }
         if (other.CompareTag("StartPoint"))
         {
             PickUpBrick(other.gameObject);
@@ -27,7 +51,6 @@ public class PlayerStack : MonoBehaviour
 
         if (other.CompareTag("BridgeStep"))
         {
-            Debug.Log("đã va chạm với cầu");
             PlaceBrick(other.gameObject);
         }
 
@@ -61,19 +84,6 @@ public class PlayerStack : MonoBehaviour
             }
         }
     }
-
-    // private void OnTriggerExit(Collider other)
-    // {
-    //     if (other.CompareTag("BrickCorner"))
-    //     {
-    //         Istate cornerState = other.GetComponent<Istate>();
-
-    //         if (cornerState != null)
-    //         {
-    //             cornerState.OnExit();
-    //         }
-    //     }
-    // }
     public void PickUpBrick(GameObject brickObj)
     {
         Collider col = brickObj.GetComponent<Collider>();
@@ -85,6 +95,12 @@ public class PlayerStack : MonoBehaviour
         brickObj.transform.localEulerAngles = new Vector3(-90f, 0, -180f);
 
         collectedBricks.Add(brickObj);
+
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.score = collectedBricks.Count;
+        }
+
         UpdatePlayerHeight();
         LevelManager.RemoveTileData(brickObj.transform.position);
     }
@@ -98,13 +114,14 @@ public class PlayerStack : MonoBehaviour
             GameObject brickToDrop = collectedBricks[lastIndex];
             collectedBricks.RemoveAt(lastIndex);
 
+            brickToDrop.transform.localScale = new Vector3(1f, 1f, 0.5f);
             brickToDrop.transform.SetParent(bridgeStepObj.transform);
 
             brickToDrop.transform.localPosition = Vector3.zero;
             brickToDrop.transform.localRotation = quaternion.identity;
 
             UpdatePlayerHeight();
-            LevelManager.UpdateTileData(bridgeStepObj.transform.position, "Bricks");
+            LevelManager.UpdateTileData(bridgeStepObj.transform.position, TileType.Brick);
             bridgeStepObj.tag = "Untagged";
         }
     }
@@ -123,5 +140,23 @@ public class PlayerStack : MonoBehaviour
 
         collectedBricks.Clear();
         UpdatePlayerHeight();
+    }
+
+    private void HandleCorner(Collider other)
+    {
+         Istate cornerState = other.GetComponent<Istate>();
+
+        if (cornerState != null)
+        {
+            cornerState.OnEnter();
+        }
+        PlayerMovement moveScript = GetComponent<PlayerMovement>();
+
+        if (moveScript != null && moveScript.IsMoving)
+        {
+            Vector3 cornerPos = other.transform.position;
+            transform.position = new Vector3(cornerPos.x, transform.position.y, cornerPos.z);
+            moveScript.Redirect(moveScript.MoveVec, cornerPos);
+        }
     }
 }
