@@ -12,8 +12,8 @@ public class PlayerWinState : Istate
     {
         if (anim != null)
         {
-            anim.SetInteger("renwu", 2);
-            anim.Play("Win", 0, 0f); 
+            anim.SetInteger("renwu", (int)PlayerAnimState.Win);
+            anim.Play("Take 3", 0, 0f); 
         }
     }
     public void OnExecute()

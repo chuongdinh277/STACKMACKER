@@ -12,10 +12,7 @@ public class PlayerMoveState : Istate
     {
         if (anim != null)
         {
-            anim.SetInteger("renwu",1);
-            
-            anim.SetInteger("renwu", 1);
-
+            anim.SetInteger("renwu",(int)PlayerAnimState.Run);
             anim.Play("Take 2", 0, 0f);
         }
     }
