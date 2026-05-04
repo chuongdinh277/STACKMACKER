@@ -7,8 +7,8 @@ public class TileData
 {
     public Vector3 position;
     public Vector3 rotation;
-    public string type;
-    public string parentTag;
+    public TileType type;
+    public string parentTag = "Untagged";
     public int layer;
     public List<string> childrenTags = new List<string>();
 }
@@ -23,6 +23,6 @@ public class LevelData
 [System.Serializable]
 public struct PrefabMapping
 {
-    public string typeName;
+    public TileType type;
     public GameObject prefab;
 }
