@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -19,8 +20,17 @@ public class GameManager : MonoBehaviour
         }
     }
 
-
-    // kích hoạt khi người chơi bấm nút start
+    public void Start()
+    {
+        int savedLevel = PlayerPrefs.GetInt("ReachedLevel", 1);
+        currentLevel = savedLevel;
+        Debug.Log(currentLevel);
+        if (UIManager.Instance != null)
+        {
+            UIManager.Instance.UpdateCurrentLevel(currentLevel);
+        }
+        StartCoroutine(HandleLoadingScreen());
+    }
     public void StartGame()
     {
         isPlaying = true;
@@ -33,7 +43,8 @@ public class GameManager : MonoBehaviour
 
         Time.timeScale = 1;
         score = 0;
-
+        PlayerMovement pm = FindObjectOfType<PlayerMovement>();
+        if (pm != null) pm.transform.position = Vector3.up * 100;
         FindObjectOfType<PlayerStack>().ClearStack();
         LevelManager.Instance.GenerateLevel();
         
@@ -42,7 +53,7 @@ public class GameManager : MonoBehaviour
 
     public void PreviousLevel()
     {
-        Debug.Log(" đã restart level");
+        Debug.Log(" đã back level");
         if (currentLevel > 1)
         {
             currentLevel = currentLevel - 1;
@@ -52,5 +63,29 @@ public class GameManager : MonoBehaviour
             LevelManager.Instance.GenerateLevel();
             UIManager.Instance.OnCloseSettingClick();
         }
+    }
+
+    private IEnumerator HandleLoadingScreen()
+    {
+        UIManager.Instance.mainMenuPanel.Close();
+        UIManager.Instance.gamePlayPanel.Close();
+        float duration = 1.5f;
+        float elapse = 0f;
+
+        while (elapse < duration)
+        {
+            elapse = elapse + Time.deltaTime;
+            float progess = elapse / duration;
+            UIManager.Instance.UpdateLoadingBar(progess);
+            yield return null;
+        }
+        LevelManager.Instance.GenerateLevel();
+        yield return new WaitForEndOfFrame();
+        UIManager.Instance.loadingPanel.Close();
+        UIManager.Instance.mainMenuPanel.Open();
+        Debug.Log("bật menu");
+        //UIManager.Instance.gamePlayPanel.SetActive(true);
+
+        
     }
 }

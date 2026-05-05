@@ -19,27 +19,6 @@ public class PlayerStack : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
 
-        // Tile tile = other.GetComponent<Tile>();
-        // if (tile == null) return;
-
-        // switch (tile.type)
-        // {
-        //     case TileType.Brick:
-        //         PickUpBrick(other.gameObject);
-        //         break;
-        //     case TileType.BridgeStep:
-        //         PlaceBrick(other.gameObject);
-        //         break;
-        //     case TileType.BrickCorner:
-        //         HandleCorner(other);
-        //         break;
-        //     case TileType.Win:
-        //         GetComponent<PlayerMovement>().TriggerWinEffects();
-        //         break;
-        //     case TileType.StartPoint:
-        //         PickUpBrick(other.gameObject);
-        //         break;
-        // }
         if (other.CompareTag("StartPoint"))
         {
             PickUpBrick(other.gameObject);
@@ -105,6 +84,16 @@ public class PlayerStack : MonoBehaviour
         LevelManager.RemoveTileData(brickObj.transform.position);
     }
 
+    public void ClearStack()
+    {
+        foreach (GameObject brick in collectedBricks)
+        {
+            Destroy(brick);
+        }
+
+        collectedBricks.Clear();
+        UpdatePlayerHeight();
+    }
     private void PlaceBrick(GameObject bridgeStepObj)
     {
         if (collectedBricks.Count > 0)
@@ -124,39 +113,20 @@ public class PlayerStack : MonoBehaviour
             LevelManager.UpdateTileData(bridgeStepObj.transform.position, TileType.Brick);
             bridgeStepObj.tag = "Untagged";
         }
+
+        else
+        {
+            PlayerMovement moveScript = GetComponent<PlayerMovement>();
+            if (moveScript != null)
+            {
+                moveScript.StopAtBridge(bridgeStepObj.transform.position);
+            }
+        }
     }
 
     private void UpdatePlayerHeight()
     {
         float newY = collectedBricks.Count * brickHeight;
         modelPlayer.localPosition = new Vector3(0, newY, 0);
-    }
-    public void ClearStack()
-    {
-        foreach (GameObject brick in collectedBricks)
-        {
-            Destroy(brick);
-        }
-
-        collectedBricks.Clear();
-        UpdatePlayerHeight();
-    }
-
-    private void HandleCorner(Collider other)
-    {
-         Istate cornerState = other.GetComponent<Istate>();
-
-        if (cornerState != null)
-        {
-            cornerState.OnEnter();
-        }
-        PlayerMovement moveScript = GetComponent<PlayerMovement>();
-
-        if (moveScript != null && moveScript.IsMoving)
-        {
-            Vector3 cornerPos = other.transform.position;
-            transform.position = new Vector3(cornerPos.x, transform.position.y, cornerPos.z);
-            moveScript.Redirect(moveScript.MoveVec, cornerPos);
-        }
     }
 }
