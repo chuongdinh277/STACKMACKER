@@ -55,6 +55,7 @@ public class UIManager : MonoBehaviour
     }
 
     public void ToggleSound()
+    public void ShowWinPanel()
     {
         
     }
