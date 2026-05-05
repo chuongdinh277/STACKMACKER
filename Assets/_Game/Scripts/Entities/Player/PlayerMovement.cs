@@ -178,26 +178,6 @@ public class PlayerMovement : MonoBehaviour
     }
     private void ExecuteMove()
     {
-        RaycastHit hit;
-        bool isOverBridge = false;
-        
-        if (Physics.Raycast(transform.position + Vector3.up * 0.5f, Vector3.down, out hit, 1f))
-        {
-            if (hit.collider.CompareTag("BridgeStep")) isOverBridge = true;
-
-            if (hit.collider.CompareTag("Win") && !hasTriggeredWin)
-            {
-                TriggerWinEffects();
-            }
-        }
-
-        if (isOverBridge && playerStack.CollectedBrickCount <= 0)
-        {
-            transform.position = new Vector3(Mathf.Round(transform.position.x), transform.position.y, Mathf.Round(transform.position.z));
-            StopMoving();
-            return;
-        }
-
         transform.position = Vector3.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
         if (Vector3.Distance(transform.position, targetPos) < 0.01f)
         {
