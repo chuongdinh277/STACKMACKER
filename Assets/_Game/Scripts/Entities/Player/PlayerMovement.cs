@@ -344,5 +344,14 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    private IEnumerator DelayShowwinPanel(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        if (UIManager.Instance != null)
+        {
+           UIManager.Instance.ShowWinPanel();
+        }
+    }
    
 }
