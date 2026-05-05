@@ -114,6 +114,7 @@ public class PlayerMovement : MonoBehaviour
             }
         }
     }
+    public void StopAtBridge(Vector3 bridgePos)
     private void HandleInput()
     {
         if (isMoving) return;
