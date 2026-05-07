@@ -40,6 +40,8 @@ public class GameManager : MonoBehaviour
 
     public void RestartLevel()
     {
+        Debug.Log(" đã restart level");
+
         Time.timeScale = 1;
         score = 0;
         if (PlayerMovement.Instance != null) 
@@ -57,6 +59,7 @@ public class GameManager : MonoBehaviour
 
     public void PreviousLevel()
     {
+        Debug.Log(" đã back level");
         if (currentLevel > 1)
         {
             currentLevel = currentLevel - 1;
