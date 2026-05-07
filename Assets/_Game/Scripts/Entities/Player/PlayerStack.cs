@@ -15,7 +15,12 @@ public class PlayerStack : MonoBehaviour
     private List<GameObject> collectedBricks = new List<GameObject>();
 
     public int CollectedBrickCount => collectedBricks.Count;
+    public static PlayerStack Instance;
 
+    private void Awake()
+    {
+        if (Instance == null) Instance = this;
+    }
     private void OnTriggerEnter(Collider other)
     {
 

@@ -21,8 +21,8 @@ public class MapEditorTool : Editor
 
         if (manager.isBrushMode)
         {
-            EditorGUILayout.HelpBox("ĐANG Ở CHẾ ĐỘ BÚT: Click/Di chuột để vẽ. Giữ Shift để xóa.", MessageType.Info);
-            EditorGUILayout.LabelField("--- CHỌN LOẠI GẠCH ---", EditorStyles.boldLabel);
+            EditorGUILayout.HelpBox("ĐANG Ở CHẾ ĐỘ BÚT: Click và Di chuột để vẽ. Giữ Shift để xóa.", MessageType.Info);
+            EditorGUILayout.LabelField("---------- CHỌN LOẠI GẠCH ----------", EditorStyles.boldLabel);
             foreach (TileType type in System.Enum.GetValues(typeof(TileType)))
             {
                 if (type == TileType.None) continue;
@@ -97,25 +97,49 @@ public class MapEditorTool : Editor
         
         SceneView.RepaintAll();
     }
-
-    // Các hàm CreateTile, RemoveTile, GetFolder giữ nguyên như cũ
-    private void CreateTile(Vector3 pos) {
+    private void CreateTile(Vector3 pos) 
+    {
         foreach (Transform cat in manager.gridParent)
-            foreach (Transform t in cat) if (Vector3.Distance(t.position, pos) < 0.1f) return;
+        {
+            foreach (Transform t in cat)
+            {
+                if (Vector3.Distance(t.position, pos) < 0.1f) 
+                {
+                    return;
+                }
+            } 
+        }
         var mapping = manager.prefabPool.Find(p => p.type == manager.selectedType);
-        if (mapping.prefab != null) {
+
+        if (mapping.prefab != null) 
+        {
             GameObject newTile = (GameObject)PrefabUtility.InstantiatePrefab(mapping.prefab);
+
             newTile.transform.position = pos;
+
             newTile.transform.parent = GetFolder(manager.selectedType.ToString());
+
             Undo.RegisterCreatedObjectUndo(newTile, "Create Tile");
         }
     }
-    private void RemoveTile(Vector3 pos) {
+    private void RemoveTile(Vector3 pos) 
+    {
         foreach (Transform cat in manager.gridParent)
+        {
             foreach (Transform t in cat)
-                if (Vector3.Distance(t.position, pos) < 0.1f) { Undo.DestroyObjectImmediate(t.gameObject); return; }
+            {
+                if (Vector3.Distance(t.position, pos) < 0.1f) 
+                { 
+                    Undo.DestroyObjectImmediate(t.gameObject); 
+                    return; 
+                }
+            }
+                
+        }
+            
     }
-    private Transform GetFolder(string n) {
+    private Transform GetFolder(string n) 
+    {
         Transform f = manager.gridParent.Find(n);
         if (f == null) { f = new GameObject(n).transform; f.SetParent(manager.gridParent); }
         return f;

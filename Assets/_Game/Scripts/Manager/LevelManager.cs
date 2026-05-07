@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
 
 
@@ -7,8 +6,11 @@ public class LevelManager : MonoBehaviour
 {
     [Header("Settings")]
     public string levelFileName = "level_1";
-
-    [Header("Prefab Pool")]
+    [Header("Manual References")]
+    public PlayerMovement playerMovement; 
+    public PlayerStack playerStack;
+    
+    public Vector3 startPointPos;
     public List<PrefabMapping> prefabPool;
 
     public static Dictionary<Vector3, TileData> worldMap = new Dictionary<Vector3, TileData>(); 
@@ -16,15 +18,6 @@ public class LevelManager : MonoBehaviour
     public static List<Vector3> stopPoints = new List<Vector3>();
 
     public static LevelManager Instance;
-
-    [Header("Manual References")]
-    public PlayerMovement playerMovement; 
-    public PlayerStack playerStack;
-    void Start()
-    {
-        GenerateLevel();
-    }
-
     private void Awake()
     {
         if (Instance == null)
@@ -38,6 +31,8 @@ public class LevelManager : MonoBehaviour
     }
     public void GenerateLevel()
     {
+
+        if (playerMovement != null) playerMovement.enabled = false;
         string currentFileName = "Level_" + GameManager.Instance.currentLevel;
         TextAsset jsonAsset = Resources.Load<TextAsset>(currentFileName);
 
@@ -62,8 +57,6 @@ public class LevelManager : MonoBehaviour
 
         Dictionary<TileType, Transform> groups = new Dictionary<TileType, Transform>();
 
-        GameObject startPointObj = null;
-
         foreach (TileData t in data.tiles)
         {
             if (!worldMap.ContainsKey(t.position))
@@ -75,7 +68,6 @@ public class LevelManager : MonoBehaviour
             if (mapping.prefab == null) continue;
 
             
-
 
             GameObject prefab =  mapping.prefab;
 
@@ -90,7 +82,15 @@ public class LevelManager : MonoBehaviour
 
             if (t.type == TileType.StartPoint)
             {
-                startPointObj = newTile;
+                Renderer r = newTile.GetComponentInChildren<Renderer>();
+                if (r != null)
+                {
+                    startPointPos = new Vector3(r.bounds.center.x, r.bounds.max.y, r.bounds.center.z);
+                }
+                else
+                {
+                    startPointPos = t.position + Vector3.up * 0.5f;
+                }
             }
 
             newTile.name = mapping.prefab.name;
@@ -148,15 +148,28 @@ public class LevelManager : MonoBehaviour
 
     public void NextLevel()
     {
-        Invoke(nameof(ExecuteNextLevel), 2f);
+        ExecuteNextLevel();
     }
 
     private void ExecuteNextLevel()
     {
         if (GameManager.Instance != null)
         {
-            GameManager.Instance.currentLevel++;
+            int reachedLevel = PlayerPrefs.GetInt("ReachedLevel", 1);
+            int nextLevel = GameManager.Instance.currentLevel + 1;
 
+
+            if (nextLevel > reachedLevel)
+            {
+                PlayerPrefs.SetInt("ReachedLevel", nextLevel);
+                PlayerPrefs.Save();
+                Debug.Log("đã lưu level cao nhất" + nextLevel);
+            }
+            GameManager.Instance.currentLevel++;
+            if (GameManager.Instance.currentLevel > 10)
+            {
+                GameManager.Instance.currentLevel = 1;
+            }
             GenerateLevel();
 
         }
@@ -165,6 +178,7 @@ public class LevelManager : MonoBehaviour
     {
         if (playerMovement != null && playerStack != null)
         {
+            playerMovement.enabled = true;
             playerStack.ClearStack();
             playerMovement.OnInit();
         }

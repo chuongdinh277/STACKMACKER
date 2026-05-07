@@ -43,9 +43,14 @@ public class GameManager : MonoBehaviour
 
         Time.timeScale = 1;
         score = 0;
-        PlayerMovement pm = FindObjectOfType<PlayerMovement>();
-        if (pm != null) pm.transform.position = Vector3.up * 100;
-        FindObjectOfType<PlayerStack>().ClearStack();
+        if (PlayerMovement.Instance != null) 
+        {
+            PlayerMovement.Instance.transform.position = Vector3.up * 100;
+        }
+        if (PlayerStack.Instance != null)
+        {
+            PlayerStack.Instance.ClearStack();
+        }
         LevelManager.Instance.GenerateLevel();
         
         UIManager.Instance.OnCloseSettingClick();
@@ -59,7 +64,10 @@ public class GameManager : MonoBehaviour
             currentLevel = currentLevel - 1;
             Time.timeScale = 1;
             score = 0;
-            FindObjectOfType<PlayerStack>().ClearStack();
+            if (PlayerStack.Instance != null)
+            {
+                PlayerStack.Instance.ClearStack();
+            }
             LevelManager.Instance.GenerateLevel();
             UIManager.Instance.OnCloseSettingClick();
         }

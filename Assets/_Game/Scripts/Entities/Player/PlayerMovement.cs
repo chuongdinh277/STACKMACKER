@@ -1,9 +1,6 @@
 
-using Unity.VisualScripting;
-using UnityEditor.Experimental.GraphView;
+using System.Collections;
 using UnityEngine;
-using UnityEngine.Tilemaps;
-using UnityEngine.XR;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float speed = 15f;
@@ -21,16 +18,21 @@ public class PlayerMovement : MonoBehaviour
     private Istate currentState;
     private PlayerMoveState moveState;
     private PlayerWinState winState;
-
-    private readonly float rayDistance = 0.7f;
-    private readonly Vector3 rayOffset = Vector3.up * 0.5f;
     private PlayerStack playerStack;
     
     private bool  hasTriggeredWin = false;
     private Direct currentDirect = Direct.None;
+    private bool isFailing = false;
 
 
-
+    public static PlayerMovement Instance;
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+    }
 
     private void Start()
     {
@@ -46,6 +48,7 @@ public class PlayerMovement : MonoBehaviour
     public void OnInit()
     {
         isMoving = false; 
+        isFailing = false;
         moveVec = Vector3.zero; 
         targetPos = transform.position;
         hasTriggeredWin = false;
@@ -62,6 +65,7 @@ public class PlayerMovement : MonoBehaviour
     }
     private void Update()
     {
+        if (!GameManager.Instance.isPlaying) return;
         if (currentState != null) currentState.OnExecute();
         HandleInput();
         if (isMoving)
@@ -115,6 +119,17 @@ public class PlayerMovement : MonoBehaviour
         }
     }
     public void StopAtBridge(Vector3 bridgePos)
+    {
+        isMoving = false;
+        isFailing = true;
+        transform.position = new Vector3(bridgePos.x, transform.position.y, bridgePos.z);
+        targetPos = transform.position;
+
+        if (UIManager.Instance != null)
+        {
+            UIManager.Instance.ShowLostPanel();
+        }
+    }
     private void HandleInput()
     {
         if (isMoving) return;
@@ -153,27 +168,18 @@ public class PlayerMovement : MonoBehaviour
     
     private void ExecuteInit()
     {
-         GameObject startPoint = GameObject.FindGameObjectWithTag("StartPoint");
-        
-        if (startPoint != null)
+        if (LevelManager.Instance != null)
         {
+            Vector3 spawnPos = LevelManager.Instance.startPointPos;
             
-            Renderer brickRenderer = startPoint.GetComponentInChildren<Renderer>();
-            if (brickRenderer != null)
-            {
-                Vector3 realCenter = brickRenderer.bounds.center;
-                float topY = brickRenderer.bounds.max.y;
-                Vector3 spawnPos = new Vector3(realCenter.x, topY, realCenter.z);
+            transform.position = spawnPos;
+            targetPos = spawnPos;
             
-                transform.position = spawnPos;
-                
-                targetPos = spawnPos;
-                
-            }
+            Debug.Log("Đã đặt Player vào vị trí StartPoint từ LevelManager");
         }
         else
         {
-            Debug.Log("Null");
+            Debug.LogWarning("Không tìm thấy LevelManager để lấy vị trí bắt đầu!");
         }
     }
     private void ExecuteMove()
@@ -207,8 +213,6 @@ public class PlayerMovement : MonoBehaviour
         moveVec = Vector3.zero;
         mousePosDown = Input.mousePosition; 
     }
-
-   
     private Vector3 FindNextStopPoint(Vector3 currentCheckPos, Vector3 direction)
     {
         float maxDistance = 100f;
@@ -325,13 +329,10 @@ public class PlayerMovement : MonoBehaviour
             }
         }
         ChangePlayerState(winState);
+        UIManager.Instance.OnCloseGamePlayPanel();
+        StartCoroutine(DelayShowwinPanel(3f));
 
-        if (LevelManager.Instance != null)
-        {
-            LevelManager.Instance.NextLevel();
-        }
     }
-
     private Vector3 GetVectorFromDirect(Direct dir)
     {
         switch(dir)
