@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
     public void Start()
     {
         int savedLevel = PlayerPrefs.GetInt("ReachedLevel", 1);
+        if (savedLevel > 10) savedLevel = 1;
         currentLevel = savedLevel;
         Debug.Log(currentLevel);
         if (UIManager.Instance != null)
@@ -92,8 +93,6 @@ public class GameManager : MonoBehaviour
         UIManager.Instance.loadingPanel.Close();
         UIManager.Instance.mainMenuPanel.Open();
         Debug.Log("bật menu");
-        //UIManager.Instance.gamePlayPanel.SetActive(true);
 
-        
     }
 }

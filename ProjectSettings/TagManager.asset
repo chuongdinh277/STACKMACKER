@@ -11,6 +11,7 @@ TagManager:
   - Win
   - BrickCorner
   - lihua
+  - Chest
   layers:
   - Default
   - TransparentFX
