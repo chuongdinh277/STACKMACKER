@@ -23,11 +23,16 @@ public class MapEditorTool : Editor
         {
             EditorGUILayout.HelpBox("ĐANG Ở CHẾ ĐỘ BÚT: Click và Di chuột để vẽ. Giữ Shift để xóa.", MessageType.Info);
             EditorGUILayout.LabelField("---------- CHỌN LOẠI GẠCH ----------", EditorStyles.boldLabel);
+
             foreach (TileType type in System.Enum.GetValues(typeof(TileType)))
             {
                 if (type == TileType.None) continue;
                 GUI.backgroundColor = (manager.selectedType == type) ? Color.cyan : Color.white;
-                if (GUILayout.Button(type.ToString())) manager.selectedType = type;
+
+                if (GUILayout.Button(type.ToString())) 
+                {
+                    manager.selectedType = type;
+                }
             }
         }
         
@@ -52,7 +57,8 @@ public class MapEditorTool : Editor
 
 
         EditorGUILayout.Space(20);
-        if (GUILayout.Button("SAVE MAP (JSON)", GUILayout.Height(30)))
+
+        if (GUILayout.Button("SAVE MAP", GUILayout.Height(30)))
         {
             string defaultPath = Application.dataPath + "/Resources";
             string path = EditorUtility.SaveFilePanel("Lưu level Game", defaultPath, manager.levelName, "json");
@@ -66,7 +72,10 @@ public class MapEditorTool : Editor
 
     private void OnSceneGUI()
     {
-        if (manager == null || !manager.isBrushMode) return;
+        if (manager == null || !manager.isBrushMode) 
+        {
+            return;
+        }
 
         int controlID = GUIUtility.GetControlID(FocusType.Passive);
         HandleUtility.AddDefaultControl(controlID);
@@ -79,13 +88,20 @@ public class MapEditorTool : Editor
             Vector3 spawnPos = new Vector3(Mathf.Round(hit.point.x), 0, Mathf.Round(hit.point.z));
             
             Handles.color = e.shift ? Color.red : Color.cyan;
+
             Handles.DrawWireCube(spawnPos, Vector3.one * 1.1f);
             Handles.DrawSolidDisc(spawnPos, Vector3.up, 0.2f);
 
             if ((e.type == EventType.MouseDown || e.type == EventType.MouseDrag) && e.button == 0)
             {
-                if (e.shift) RemoveTile(spawnPos);
-                else CreateTile(spawnPos);
+                if (e.shift) 
+                {
+                    RemoveTile(spawnPos);
+                }
+                else 
+                {
+                    CreateTile(spawnPos);
+                }
                 e.Use();
             }
         }
@@ -141,7 +157,11 @@ public class MapEditorTool : Editor
     private Transform GetFolder(string n) 
     {
         Transform f = manager.gridParent.Find(n);
-        if (f == null) { f = new GameObject(n).transform; f.SetParent(manager.gridParent); }
+        if (f == null) 
+        { 
+            f = new GameObject(n).transform; 
+            f.SetParent(manager.gridParent); 
+        }
         return f;
     }
 }

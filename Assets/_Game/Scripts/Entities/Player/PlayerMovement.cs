@@ -60,9 +60,8 @@ public class PlayerMovement : MonoBehaviour
         mousePosDown = Input.mousePosition;
         Invoke(nameof(ExecuteInit), 0.1f);
 
-       
-
     }
+
     private void Update()
     {
         if (!GameManager.Instance.isPlaying) return;
@@ -73,6 +72,8 @@ public class PlayerMovement : MonoBehaviour
             ExecuteMove();
         }
     }
+
+
     public void ChangePlayerState(Istate newState)
     {
         
@@ -83,6 +84,8 @@ public class PlayerMovement : MonoBehaviour
         currentState = newState;
         currentState.OnEnter();
     }
+
+
     public void Redirect(Vector3 direction, Vector3 cornerPosition)
 
     {
@@ -103,6 +106,8 @@ public class PlayerMovement : MonoBehaviour
         }
         isMoving = false;
     }
+
+
     public void TriggerWinEffects()
     {
         hasTriggeredWin = true;
@@ -118,6 +123,8 @@ public class PlayerMovement : MonoBehaviour
             }
         }
     }
+
+
     public void StopAtBridge(Vector3 bridgePos)
     {
         isMoving = false;
@@ -130,6 +137,8 @@ public class PlayerMovement : MonoBehaviour
             UIManager.Instance.ShowLostPanel();
         }
     }
+
+    // nhận diện thao tác vuốt
     private void HandleInput()
     {
         if (isMoving) return;
@@ -175,13 +184,15 @@ public class PlayerMovement : MonoBehaviour
             transform.position = spawnPos;
             targetPos = spawnPos;
             
-            Debug.Log("Đã đặt Player vào vị trí StartPoint từ LevelManager");
+            //Debug.Log("Đã đặt Player vào vị trí StartPoint từ LevelManager");
         }
         else
         {
-            Debug.LogWarning("Không tìm thấy LevelManager để lấy vị trí bắt đầu!");
+            //Debug.LogWarning("Không tìm thấy LevelManager để lấy vị trí bắt đầu!");
         }
     }
+
+    // xử lí việc di chuyển nhân vật từ vị trí hiện tại tới điểm dừng tiếp theo
     private void ExecuteMove()
     {
         transform.position = Vector3.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
@@ -199,6 +210,8 @@ public class PlayerMovement : MonoBehaviour
             }
         }
     }
+
+    // hàm dừng
     private void StopMoving()
     {
         float snapX = Mathf.Floor(transform.position.x * 2.0f) / 2.0f;
@@ -213,6 +226,8 @@ public class PlayerMovement : MonoBehaviour
         moveVec = Vector3.zero;
         mousePosDown = Input.mousePosition; 
     }
+
+    // Hàm tìm điểm dừng tiếp theo
     private Vector3 FindNextStopPoint(Vector3 currentCheckPos, Vector3 direction)
     {
         float maxDistance = 100f;
@@ -313,6 +328,8 @@ public class PlayerMovement : MonoBehaviour
         }
         return currentCheckPos;
     }
+
+    // hàm xử lí logic khi thắng
     private void FinalWinCelebration()
     {
         isMoving = false;
@@ -333,6 +350,7 @@ public class PlayerMovement : MonoBehaviour
         StartCoroutine(DelayShowwinPanel(3f));
 
     }
+    
     private Vector3 GetVectorFromDirect(Direct dir)
     {
         switch(dir)
@@ -345,6 +363,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    // xử lí việc chờ 1 khaongr tgian trc khi win
     private IEnumerator DelayShowwinPanel(float delay)
     {
         yield return new WaitForSeconds(delay);
