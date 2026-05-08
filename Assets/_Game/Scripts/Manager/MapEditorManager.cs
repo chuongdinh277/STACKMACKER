@@ -1,7 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System.IO;
-using Unity.VisualScripting.Antlr3.Runtime;
 
 public class MapEditorManager : MonoBehaviour
 {
@@ -32,8 +31,20 @@ public class MapEditorManager : MonoBehaviour
                     parentTag = item.tag,
                     layer = item.gameObject.layer
                 };
-                try { t.type = (TileType) System.Enum.Parse(typeof(TileType), category.name); } catch { continue; }
-                if (t.type == TileType.StartPoint) leveldata.playerStartPos = item.position;
+
+
+                try 
+                { 
+                    t.type = (TileType) System.Enum.Parse(typeof(TileType), category.name); 
+                } 
+                catch 
+                {
+                    continue; 
+                }
+                if (t.type == TileType.StartPoint) 
+                {
+                    leveldata.playerStartPos = item.position;
+                }
                 leveldata.tiles.Add(t);
             }
         }
@@ -45,7 +56,6 @@ public class MapEditorManager : MonoBehaviour
        #if UNITY_EDITOR
        UnityEditor.AssetDatabase.Refresh();
        #endif
-       Debug.Log("<color=green> Đã lưu map thành công tại:  </color>" + fullPath);
     }
 
     public void LoadMapFromJson(string json)
@@ -67,9 +77,11 @@ public class MapEditorManager : MonoBehaviour
             {
                 Transform folder = GetFolder(t.type.ToString());
                 GameObject newTile = (GameObject)UnityEditor.PrefabUtility.InstantiatePrefab(mapping.prefab);
+
                 newTile.transform.position = t.position;
                 newTile.transform.eulerAngles = t.rotation;
                 newTile.layer = t.layer; 
+                
                 if (!string.IsNullOrEmpty(t.parentTag))
                 {
                     newTile.tag = t.parentTag;
