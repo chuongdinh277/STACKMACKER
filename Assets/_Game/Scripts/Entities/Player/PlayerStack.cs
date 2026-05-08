@@ -52,7 +52,7 @@ public class PlayerStack : MonoBehaviour
         collectedBricks.Clear();
         UpdatePlayerHeight();
     }
-    public void PlaceBrick(GameObject bridgeStepObj)
+    public bool PlaceBrick(GameObject bridgeStepObj)
     {
         if (collectedBricks.Count > 0)
         {
@@ -70,6 +70,7 @@ public class PlayerStack : MonoBehaviour
             UpdatePlayerHeight();
             LevelManager.UpdateTileData(bridgeStepObj.transform.position, TileType.Brick);
             bridgeStepObj.tag = "Untagged";
+            return true;
         }
 
         else
@@ -79,6 +80,7 @@ public class PlayerStack : MonoBehaviour
             {
                 moveScript.StopAtBridge(bridgeStepObj.transform.position);
             }
+            return false;
         }
     }
 

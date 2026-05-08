@@ -99,10 +99,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 224019103266907943}
-  - component: {fileID: 5092720690329714543}
   m_Layer: 5
   m_Name: StartPoint
-  m_TagString: StartPoint
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -128,27 +127,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!65 &5092720690329714543
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1045506591760351}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 5, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1494017965046362
 GameObject:
   m_ObjectHideFlags: 0
@@ -161,7 +139,6 @@ GameObject:
   - component: {fileID: 33926114544505843}
   - component: {fileID: 23310507170802036}
   - component: {fileID: 5083712898961834015}
-  - component: {fileID: 1980003698652178464}
   m_Layer: 0
   m_Name: dimian
   m_TagString: StartPoint
@@ -262,15 +239,3 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.5, y: 0.5, z: 0.5}
   m_Center: {x: 0.0000060945777, y: -0.0000002920447, z: 0.14994933}
---- !u!114 &1980003698652178464
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1494017965046362}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 786677b441df0a1418945de6398ca1ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::StartPoint
