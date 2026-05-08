@@ -84,24 +84,29 @@ public class PlayerMovement : MonoBehaviour
         currentState.OnEnter();
     }
     public void Redirect(Vector3 direction, Vector3 cornerPosition)
+    {   
+        transform.position = new Vector3(cornerPosition.x, transform.position.y, cornerPosition.z);
 
-    {
-        Vector3[] checkDirection = {Vector3.forward, Vector3.back, Vector3.left, Vector3.right};
+        Vector3[] checkDirection = { Vector3.forward, Vector3.back, Vector3.left, Vector3.right };
 
         foreach (Vector3 dir in checkDirection)
         {
             if (dir == -direction) continue;
-            Vector3 potentialTarget = FindNextStopPoint(cornerPosition, dir);
 
-            if (Vector3.Distance(cornerPosition, potentialTarget) > 0.1f)
+            Vector3 potentialTarget = FindNextStopPoint(transform.position, dir);
+
+            if (Vector3.Distance(transform.position, potentialTarget) > 0.8f)
             {
                 moveVec = dir;
                 targetPos = new Vector3(potentialTarget.x, transform.position.y, potentialTarget.z);
                 isMoving = true;
+            
                 return;
             }
         }
+        
         isMoving = false;
+        moveVec = Vector3.zero;
     }
     public void TriggerWinEffects()
     {
@@ -174,8 +179,22 @@ public class PlayerMovement : MonoBehaviour
             
             transform.position = spawnPos;
             targetPos = spawnPos;
-            
+            PlayerStack currentStack = GetComponent<PlayerStack>();
+            Collider[] colliders = Physics.OverlapSphere(spawnPos, 0.5f);
+            foreach (var col in colliders)
+            {
+                if (col.CompareTag("StartPoint"))
+                {
+                    if (currentStack != null)
+                    {
+                        currentStack.PickUpBrick(col.gameObject);
+                        col.enabled = false;
+                    }
+                    break; 
+                }
+            }
             Debug.Log("Đã đặt Player vào vị trí StartPoint từ LevelManager");
+
         }
         else
         {

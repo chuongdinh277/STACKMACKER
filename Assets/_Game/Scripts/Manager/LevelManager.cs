@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System.Collections;
 
 
 public class LevelManager : MonoBehaviour
@@ -119,7 +120,7 @@ public class LevelManager : MonoBehaviour
             newTile.isStatic = true;
         }
 
-        DelayedSetup();
+        StartCoroutine(DelayedSetup());
     }
 
 
@@ -174,8 +175,9 @@ public class LevelManager : MonoBehaviour
 
         }
     }
-    private void DelayedSetup()
+    private IEnumerator DelayedSetup()
     {
+        yield return new WaitForEndOfFrame();
         if (playerMovement != null && playerStack != null)
         {
             playerMovement.enabled = true;

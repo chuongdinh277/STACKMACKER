@@ -2,7 +2,6 @@ using System.Collections.Generic;
 
 using Unity.Mathematics;
 using UnityEngine;
-using UnityEngine.EventSystems;
 public class PlayerStack : MonoBehaviour
 {
 
@@ -19,55 +18,9 @@ public class PlayerStack : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance == null) Instance = this;
+        Instance = this;
     }
-    private void OnTriggerEnter(Collider other)
-    {
 
-        if (other.CompareTag("StartPoint"))
-        {
-            PickUpBrick(other.gameObject);
-        }
-        if (other.CompareTag("Brick"))
-        {
-            PickUpBrick(other.gameObject);
-        }
-
-        if (other.CompareTag("BridgeStep"))
-        {
-            PlaceBrick(other.gameObject);
-        }
-
-        if (other.CompareTag("BrickCorner"))
-        {
-            
-            Istate cornerState = other.GetComponent<Istate>();
-
-            if (cornerState != null)
-            {
-                cornerState.OnEnter();
-            }
-            PlayerMovement moveScript = GetComponent<PlayerMovement>();
-
-            if (moveScript != null && moveScript.IsMoving)
-            {
-                Vector3 cornerPos = other.transform.position;
-                transform.position = new Vector3(cornerPos.x, transform.position.y, cornerPos.z);
-                moveScript.Redirect(moveScript.MoveVec, cornerPos);
-            }
-        }
-
-        if (other.CompareTag("Win"))
-        {
-            Debug.Log("wingame");
-            PlayerMovement moveScript = GetComponent<PlayerMovement>();
-            if (moveScript != null)
-            {
-                Debug.Log("wingame thôi");
-                moveScript.TriggerWinEffects();
-            }
-        }
-    }
     public void PickUpBrick(GameObject brickObj)
     {
         Collider col = brickObj.GetComponent<Collider>();
@@ -99,7 +52,7 @@ public class PlayerStack : MonoBehaviour
         collectedBricks.Clear();
         UpdatePlayerHeight();
     }
-    private void PlaceBrick(GameObject bridgeStepObj)
+    public void PlaceBrick(GameObject bridgeStepObj)
     {
         if (collectedBricks.Count > 0)
         {

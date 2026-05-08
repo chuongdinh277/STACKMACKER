@@ -2962,7 +2962,7 @@ GameObject:
   - component: {fileID: 730538868}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5584,6 +5584,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelManager
   levelFileName: Level_1
+  playerMovement: {fileID: 730538867}
+  playerStack: {fileID: 730538868}
+  startPointPos: {x: 0, y: 0, z: 0}
   prefabPool:
   - type: 1
     prefab: {fileID: 1045506591760351, guid: f206ccc114e101b4dafffd4915d4a812, type: 3}
@@ -5597,9 +5600,6 @@ MonoBehaviour:
     prefab: {fileID: 1450262381653725, guid: aa4c44423e73f5441a5e60f5adb9cb21, type: 3}
   - type: 6
     prefab: {fileID: 1045506591760351, guid: a5a3e6dad171f954cab1be1a2e5049d7, type: 3}
-  playerMovement: {fileID: 730538867}
-  playerStack: {fileID: 730538868}
-  startPointPos: {x: 0, y: 0, z: 0}
 --- !u!4 &1752628863
 Transform:
   m_ObjectHideFlags: 0
@@ -9614,6 +9614,10 @@ PrefabInstance:
     - target: {fileID: 1843088429647147010, guid: c7ac942ec347729488ea144536c167c1, type: 3}
       propertyPath: m_Name
       value: people
+      objectReference: {fileID: 0}
+    - target: {fileID: 1843088429647147010, guid: c7ac942ec347729488ea144536c167c1, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 1942140727499809467, guid: c7ac942ec347729488ea144536c167c1, type: 3}
       propertyPath: m_Pivot.x
