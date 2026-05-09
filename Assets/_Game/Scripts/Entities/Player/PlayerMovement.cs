@@ -130,10 +130,7 @@ public class PlayerMovement : MonoBehaviour
         transform.position = new Vector3(bridgePos.x, transform.position.y, bridgePos.z);
         targetPos = transform.position;
 
-        if (UIManager.Instance != null)
-        {
-            UIManager.Instance.ShowLostPanel();
-        }
+        UIManager.Instance.OpenPanel(UIPanelType.Lost);
     }
     private void HandleInput()
     {
@@ -348,7 +345,10 @@ public class PlayerMovement : MonoBehaviour
             }
         }
         ChangePlayerState(winState);
-        UIManager.Instance.OnCloseGamePlayPanel();
+        if (UIManager.Instance != null)
+        {
+            UIManager.Instance.CloseGameplayPanel(); 
+        }
         StartCoroutine(DelayShowwinPanel(3f));
 
     }
@@ -368,10 +368,7 @@ public class PlayerMovement : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
 
-        if (UIManager.Instance != null)
-        {
-           UIManager.Instance.ShowWinPanel();
-        }
+        UIManager.Instance.OpenPanel(UIPanelType.Win);
     }
    
 }
