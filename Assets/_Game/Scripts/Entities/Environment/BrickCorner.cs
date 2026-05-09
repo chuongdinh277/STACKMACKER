@@ -12,12 +12,12 @@ public class BrickCorner : MonoBehaviour, Istate
 
    private void OnTriggerEnter(Collider other) 
    {
-    if (other.CompareTag("Player")) {
+    if (other.CompareTag("Player")) 
+    {
         Vector3 cornerPos = transform.position;
-        // Gọi hiệu ứng xoay của Corner
         OnEnter(); 
-        // Điều khiển Player rẽ hướng
-        if (PlayerMovement.Instance.IsMoving) {
+        if (PlayerMovement.Instance.IsMoving) 
+        {
             PlayerMovement.Instance.Redirect(PlayerMovement.Instance.MoveVec, cornerPos);
         }
     }

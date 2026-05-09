@@ -378,9 +378,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 90829518}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21479c9cf28ea554daed5d9c41e00959, type: 3}
+  m_Script: {fileID: 11500000, guid: 864102aaf86f7de4ea037aebc0a8b15f, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UIPanel
+  m_EditorClassIdentifier: Assembly-CSharp::WinPanel
+  levelText: {fileID: 671575236}
+  brickCountText: {fileID: 216140532}
 --- !u!1 &132327026
 GameObject:
   m_ObjectHideFlags: 0
@@ -524,9 +526,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 778945572}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: OnNextLevelClick
+      - m_Target: {fileID: 90829520}
+        m_TargetAssemblyTypeName: WinPanel, Assembly-CSharp
+        m_MethodName: OnNextLevelButtonClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -796,9 +798,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 778945573}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: RestartLevel
+      - m_Target: {fileID: 393206177}
+        m_TargetAssemblyTypeName: SettingMenuPanel, Assembly-CSharp
+        m_MethodName: OnRestartButtonClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1079,9 +1081,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 393206175}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21479c9cf28ea554daed5d9c41e00959, type: 3}
+  m_Script: {fileID: 11500000, guid: 6fb6cd9ff326c6b4cb87222654bdf7f8, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UIPanel
+  m_EditorClassIdentifier: Assembly-CSharp::SettingMenuPanel
+  levelText: {fileID: 980288747}
+  brickCountText: {fileID: 2103899181}
 --- !u!1 &393435232
 GameObject:
   m_ObjectHideFlags: 0
@@ -1346,6 +1350,81 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
+--- !u!1 &411048138
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 411048139}
+  - component: {fileID: 411048141}
+  - component: {fileID: 411048140}
+  m_Layer: 5
+  m_Name: RightCurtain
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &411048139
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 411048138}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1646723171}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 540, y: 0}
+  m_Pivot: {x: 0, y: 0.5}
+--- !u!114 &411048140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 411048138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 7dee2455bd7af1a47a16cf83543d3047, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &411048141
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 411048138}
+  m_CullTransparentMesh: 1
 --- !u!1 &420263823
 GameObject:
   m_ObjectHideFlags: 0
@@ -1569,8 +1648,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 778945572}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+      - m_Target: {fileID: 1585573738}
+        m_TargetAssemblyTypeName: GamePlayPanel, Assembly-CSharp
         m_MethodName: OnSettingButtonClick
         m_Mode: 1
         m_Arguments:
@@ -2824,7 +2903,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 723887506}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -2837,7 +2916,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b047e03b878da0d46af952570c69c3b2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2348f7cef04e71f4cb91331f395ef7ab, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 0
@@ -2864,9 +2943,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 723887506}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21479c9cf28ea554daed5d9c41e00959, type: 3}
+  m_Script: {fileID: 11500000, guid: 3b23f05790fd6cb4b8eea9df947b7613, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UIPanel
+  m_EditorClassIdentifier: Assembly-CSharp::MainMenuPanel
 --- !u!1 &725664580
 GameObject:
   m_ObjectHideFlags: 0
@@ -3189,9 +3268,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 753681422}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21479c9cf28ea554daed5d9c41e00959, type: 3}
+  m_Script: {fileID: 11500000, guid: f140bde092033584392d2b42feab58ab, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UIPanel
+  m_EditorClassIdentifier: Assembly-CSharp::LostGamePanel
+  levelText: {fileID: 569710726}
 --- !u!1 &778945571
 GameObject:
   m_ObjectHideFlags: 0
@@ -3230,13 +3310,12 @@ MonoBehaviour:
   lostGamePanel: {fileID: 753681424}
   levelSelectPanel: {fileID: 1975466317}
   currentLevelText: {fileID: 864435632}
-  levelTextSetting: {fileID: 980288747}
-  brickCountText: {fileID: 2103899181}
-  loadingFill: {fileID: 1558861710}
-  winLevelText: {fileID: 671575236}
-  winBrickCountText: {fileID: 216140532}
-  lostLevelText: {fileID: 569710726}
   currentMenuLevelText: {fileID: 1556780992}
+  loadingFill: {fileID: 1558861710}
+  transitionGroup: {fileID: 1646723172}
+  leftCurtain: {fileID: 1924471593}
+  rightCurtain: {fileID: 411048139}
+  transitionTime: 0.5
 --- !u!114 &778945573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3673,9 +3752,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 778945572}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: OnRetryLevelClick
+      - m_Target: {fileID: 753681424}
+        m_TargetAssemblyTypeName: LostGamePanel, Assembly-CSharp
+        m_MethodName: OnRetryButtonClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3976,9 +4055,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 778945573}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: PreviousLevel
+      - m_Target: {fileID: 393206177}
+        m_TargetAssemblyTypeName: SettingMenuPanel, Assembly-CSharp
+        m_MethodName: OnBackLevelButtonClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4127,6 +4206,7 @@ RectTransform:
   - {fileID: 90829519}
   - {fileID: 753681423}
   - {fileID: 1975466314}
+  - {fileID: 1646723171}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -4975,9 +5055,60 @@ MonoBehaviour:
   m_GameObject: {fileID: 1585573736}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21479c9cf28ea554daed5d9c41e00959, type: 3}
+  m_Script: {fileID: 11500000, guid: 46c5c9b0a13126645acbc9a4086d9d15, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UIPanel
+  m_EditorClassIdentifier: Assembly-CSharp::GamePlayPanel
+  levelText: {fileID: 864435632}
+--- !u!1 &1646723170
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1646723171}
+  - component: {fileID: 1646723172}
+  m_Layer: 5
+  m_Name: LevelTransition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1646723171
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1646723170}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1924471593}
+  - {fileID: 411048139}
+  m_Father: {fileID: 1149865789}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1080, y: 1920}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!225 &1646723172
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1646723170}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1 &1666907919
 GameObject:
   m_ObjectHideFlags: 0
@@ -5061,8 +5192,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 778945572}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+      - m_Target: {fileID: 723887510}
+        m_TargetAssemblyTypeName: MainMenuPanel, Assembly-CSharp
         m_MethodName: OnPlayButtonClick
         m_Mode: 1
         m_Arguments:
@@ -5835,9 +5966,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 778945572}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: OnRetryLevelClick
+      - m_Target: {fileID: 90829520}
+        m_TargetAssemblyTypeName: WinPanel, Assembly-CSharp
+        m_MethodName: OnRetryButtonClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5968,8 +6099,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 778945572}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+      - m_Target: {fileID: 723887510}
+        m_TargetAssemblyTypeName: MainMenuPanel, Assembly-CSharp
         m_MethodName: OnLevelSelectButtonClick
         m_Mode: 1
         m_Arguments:
@@ -6017,6 +6148,81 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1895478051}
+  m_CullTransparentMesh: 1
+--- !u!1 &1924471592
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1924471593}
+  - component: {fileID: 1924471595}
+  - component: {fileID: 1924471594}
+  m_Layer: 5
+  m_Name: LeftCurtain
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1924471593
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1924471592}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1646723171}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: -540, y: 0}
+  m_SizeDelta: {x: 540, y: 0}
+  m_Pivot: {x: 0, y: 0.5}
+--- !u!114 &1924471594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1924471592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 7dee2455bd7af1a47a16cf83543d3047, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1924471595
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1924471592}
   m_CullTransparentMesh: 1
 --- !u!1 &1943387265
 GameObject:
@@ -6244,9 +6450,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1968401477}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21479c9cf28ea554daed5d9c41e00959, type: 3}
+  m_Script: {fileID: 11500000, guid: ad95844637860234b89b0e381862c9c2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UIPanel
+  m_EditorClassIdentifier: Assembly-CSharp::LoadingPanel
+  loadingFill: {fileID: 1558861710}
 --- !u!1 &1975466313
 GameObject:
   m_ObjectHideFlags: 0
@@ -6259,7 +6466,6 @@ GameObject:
   - component: {fileID: 1975466316}
   - component: {fileID: 1975466315}
   - component: {fileID: 1975466317}
-  - component: {fileID: 1975466318}
   m_Layer: 5
   m_Name: LevelSelectPanel
   m_TagString: Untagged
@@ -6336,21 +6542,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1975466313}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21479c9cf28ea554daed5d9c41e00959, type: 3}
+  m_Script: {fileID: 11500000, guid: b33665e027d6ba04e8bc5647234b2de4, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UIPanel
---- !u!114 &1975466318
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1975466313}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 498adc3867dc7a649ba8f0a563b87c12, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LevelSelectMennu
+  m_EditorClassIdentifier: Assembly-CSharp::LevelSelectPanel
   buttonPrefab: {fileID: 2883107134901731745, guid: 71332ba2a6c0a5243ba1641c32718f64, type: 3}
   gridParent: {fileID: 132327027}
   totalLevels: 10
@@ -6713,9 +6907,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 778945572}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: OnCloseSettingClick
+      - m_Target: {fileID: 393206177}
+        m_TargetAssemblyTypeName: SettingMenuPanel, Assembly-CSharp
+        m_MethodName: OnCloseButtonClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

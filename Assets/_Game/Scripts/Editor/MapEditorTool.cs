@@ -13,6 +13,7 @@ public class MapEditorTool : Editor
         EditorGUILayout.Space(10);
 
         GUI.backgroundColor = manager.isBrushMode ? Color.red : Color.green;
+
         if (GUILayout.Button(manager.isBrushMode ? "TẮT BÚT VẼ " : "BẬT BÚT VẼ ", GUILayout.Height(40)))
         {
             manager.isBrushMode = !manager.isBrushMode;
@@ -23,11 +24,15 @@ public class MapEditorTool : Editor
         {
             EditorGUILayout.HelpBox("ĐANG Ở CHẾ ĐỘ BÚT: Click và Di chuột để vẽ. Giữ Shift để xóa.", MessageType.Info);
             EditorGUILayout.LabelField("---------- CHỌN LOẠI GẠCH ----------", EditorStyles.boldLabel);
+
             foreach (TileType type in System.Enum.GetValues(typeof(TileType)))
             {
                 if (type == TileType.None) continue;
                 GUI.backgroundColor = (manager.selectedType == type) ? Color.cyan : Color.white;
-                if (GUILayout.Button(type.ToString())) manager.selectedType = type;
+                if (GUILayout.Button(type.ToString())) 
+                {
+                    manager.selectedType = type;
+                }
             }
         }
         
@@ -109,6 +114,7 @@ public class MapEditorTool : Editor
                 }
             } 
         }
+
         var mapping = manager.prefabPool.Find(p => p.type == manager.selectedType);
 
         if (mapping.prefab != null) 
@@ -122,6 +128,7 @@ public class MapEditorTool : Editor
             Undo.RegisterCreatedObjectUndo(newTile, "Create Tile");
         }
     }
+
     private void RemoveTile(Vector3 pos) 
     {
         foreach (Transform cat in manager.gridParent)
@@ -141,7 +148,11 @@ public class MapEditorTool : Editor
     private Transform GetFolder(string n) 
     {
         Transform f = manager.gridParent.Find(n);
-        if (f == null) { f = new GameObject(n).transform; f.SetParent(manager.gridParent); }
+        if (f == null) 
+        { 
+            f = new GameObject(n).transform; 
+            f.SetParent(manager.gridParent); 
+        }
         return f;
     }
 }

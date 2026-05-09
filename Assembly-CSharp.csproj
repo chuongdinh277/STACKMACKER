@@ -59,10 +59,13 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
     <Compile Include="Assets\_Game\Scripts\Data\LevelData.cs" />
     <Compile Include="Assets\_Game\Scripts\Entities\Environment\WinPoint.cs" />
+    <Compile Include="Assets\_Game\Scripts\Manager\Panels\UIPanel.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
+    <Compile Include="Assets\_Game\Scripts\Manager\Panels\WinPanel.cs" />
     <Compile Include="Assets\_Game\Scripts\Manager\LevelManager.cs" />
+    <Compile Include="Assets\_Game\Scripts\Manager\Panels\MainMenuPanel.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
@@ -71,6 +74,8 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
+    <Compile Include="Assets\_Game\Scripts\Manager\Panels\LostGamePanel.cs" />
+    <Compile Include="Assets\_Game\Scripts\Manager\Panels\GamePlayPanel.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
     <Compile Include="Assets\_Game\Scripts\Manager\LevelButton.cs" />
     <Compile Include="Assets\_Game\Scripts\Entities\Environment\Brick.cs" />
@@ -88,12 +93,12 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
-    <Compile Include="Assets\_Game\Scripts\Manager\UIPanel.cs" />
+    <Compile Include="Assets\_Game\Scripts\Manager\Panels\LevelSelectPanel.cs" />
     <Compile Include="Assets\_Game\Scripts\CameraFollow.cs" />
+    <Compile Include="Assets\_Game\Scripts\Manager\Panels\SettingMenuPanel.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
     <Compile Include="Assets\_Game\Scripts\Entities\Player\States\PlayerMoveState.cs" />
-    <Compile Include="Assets\_Game\Scripts\Manager\LevelSelectMenu.cs" />
     <Compile Include="Assets\_Game\Scripts\Core\Enums.cs" />
     <Compile Include="Assets\_Game\Scripts\Entities\Environment\BrickCorner.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
@@ -102,6 +107,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
     <Compile Include="Assets\_Game\Scripts\Entities\Player\PlayerStack.cs" />
+    <Compile Include="Assets\_Game\Scripts\Manager\Panels\LoadingPanel.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
     <Compile Include="Assets\_Game\Scripts\Manager\UIManager.cs" />
     <Compile Include="Assets\_Game\Scripts\Core\Tile.cs" />
