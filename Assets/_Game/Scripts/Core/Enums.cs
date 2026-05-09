@@ -25,3 +25,14 @@ public enum TileType
     Win,
     StartPoint
 }
+
+public enum UIPanelType
+{
+    MainMenu,
+    GamePlay,
+    Settings,
+    Loading,
+    Win,
+    Lost,
+    LevelSelect
+}
