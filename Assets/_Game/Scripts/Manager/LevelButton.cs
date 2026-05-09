@@ -20,8 +20,11 @@ public class LevelButton : MonoBehaviour
     private void OnButtonClick()
     {
         GameManager.Instance.currentLevel = levelIndex;
+        
         LevelManager.Instance.GenerateLevel();
-        UIManager.Instance.levelSelectPanel.Close();
-        UIManager.Instance.OnPlayButtonClick();
+        
+        UIManager.Instance.UpdateCurrentLevel(levelIndex);
+        
+        UIManager.Instance.OpenPanel(UIPanelType.MainMenu);
     }
 }

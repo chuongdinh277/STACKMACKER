@@ -54,7 +54,7 @@ public class GameManager : MonoBehaviour
         }
         LevelManager.Instance.GenerateLevel();
         
-        UIManager.Instance.OnCloseSettingClick();
+        UIManager.Instance.OpenPanel(UIPanelType.GamePlay);
     }
 
     public void PreviousLevel()
@@ -63,21 +63,13 @@ public class GameManager : MonoBehaviour
         if (currentLevel > 1)
         {
             currentLevel = currentLevel - 1;
-            Time.timeScale = 1;
-            score = 0;
-            if (PlayerStack.Instance != null)
-            {
-                PlayerStack.Instance.ClearStack();
-            }
-            LevelManager.Instance.GenerateLevel();
-            UIManager.Instance.OnCloseSettingClick();
+            RestartLevel();
         }
     }
 
     private IEnumerator HandleLoadingScreen()
     {
-        UIManager.Instance.mainMenuPanel.Close();
-        UIManager.Instance.gamePlayPanel.Close();
+        UIManager.Instance.OpenPanel(UIPanelType.Loading);
         float duration = 1.5f;
         float elapse = 0f;
 
@@ -90,8 +82,7 @@ public class GameManager : MonoBehaviour
         }
         LevelManager.Instance.GenerateLevel();
         yield return new WaitForEndOfFrame();
-        UIManager.Instance.loadingPanel.Close();
-        UIManager.Instance.mainMenuPanel.Open();
+        UIManager.Instance.OpenPanel(UIPanelType.MainMenu);
         Debug.Log("bật menu");
 
     }

@@ -1,153 +1,137 @@
+using System;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using System.Collections;
 using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
     public static UIManager Instance;
 
     [Header("UI Panels")]
-    public UIPanel mainMenuPanel;
-    public UIPanel gamePlayPanel;
-    public UIPanel settingPanel;
-    public UIPanel loadingPanel;
-    public UIPanel winGamePanel;
-    public UIPanel lostGamePanel;
-    public UIPanel levelSelectPanel;
+    [SerializeField] private MainMenuPanel mainMenuPanel;
+    [SerializeField] private GamePlayPanel gamePlayPanel;
+    [SerializeField] private SettingMenuPanel settingPanel; 
+    [SerializeField] private LoadingPanel loadingPanel;
+    [SerializeField] private WinPanel winGamePanel;
+    [SerializeField] private LostGamePanel lostGamePanel;
+    [SerializeField] private LevelSelectPanel levelSelectPanel;
 
+    private List<UIPanel> allPanels = new List<UIPanel>();
 
-    [Header("Gameplay Elements")]
+    [Header("Shared Elements")]
     public TextMeshProUGUI currentLevelText;
-
-    [Header("Setting Elements")]
-    public TextMeshProUGUI levelTextSetting;
-    public TextMeshProUGUI brickCountText;
-
-
-    [Header("Loading Elements")]
-   
+    public TextMeshProUGUI currentMenuLevelText;
     public Image loadingFill;
 
-
-    [Header("Win Panel Elements")]
-    public TextMeshProUGUI winLevelText;
-    public TextMeshProUGUI winBrickCountText;
-
-    [Header("Lost Panel Elements")]
-    public TextMeshProUGUI lostLevelText;
-    [Header("Gameplay Elements")]
-    public TextMeshProUGUI currentMenuLevelText;
-
-    
+    [Header("Transition Settings")]
+    [SerializeField] private CanvasGroup transitionGroup;
+    [SerializeField] private RectTransform leftCurtain;
+    [SerializeField] private RectTransform rightCurtain;
+    [SerializeField] private float transitionTime = 1.3f;
+    private float offScreenPos = 540f;
     private void Awake()
     {
-        if (Instance == null)
+        if (Instance == null) 
         {
             Instance = this;
         }
         else
         {
-            Destroy(gameObject);
+            Destroy(gameObject);   
+            return;
         }
+        allPanels.Add(mainMenuPanel);
+        allPanels.Add(gamePlayPanel);
+        allPanels.Add(settingPanel);
+        allPanels.Add(loadingPanel);
+        allPanels.Add(winGamePanel);
+        allPanels.Add(lostGamePanel);
+        allPanels.Add(levelSelectPanel);
     }
 
-    public void OnPlayButtonClick()
+    public void OpenPanel(UIPanelType type)
     {
-        mainMenuPanel.Close();
-        gamePlayPanel.Open();
-        GameManager.Instance.StartGame();
-    }
-
-    public void OnSettingButtonClick()
-    {
-        Debug.Log("đã bấm button");
-        settingPanel.Open();
-        Time.timeScale = 0;
-
-        levelTextSetting.text = "LEVEL" + GameManager.Instance.currentLevel;
-        brickCountText.text = GameManager.Instance.score.ToString();
-    }
-
-    public void OnCloseSettingClick()
-    {
-        settingPanel.Close();
-        Time.timeScale = 1;
-    }
-
-    public void ShowWinPanel()
-    {
-        
-        if (winBrickCountText != null)
+        if (type == UIPanelType.Settings && (winGamePanel.gameObject.activeSelf || lostGamePanel.gameObject.activeSelf))
         {
-            winBrickCountText.text = GameManager.Instance.score.ToString();
+            return; 
+        }
+        foreach (var panel in allPanels)
+        {
+            if (panel != null) panel.Close();
         }
 
-        if (winLevelText != null)
+        switch (type)
         {
-            winLevelText.text = "LEVEL " + GameManager.Instance.currentLevel;
-        }
-        winGamePanel.Open();
-    }
-
-    public void ShowLostPanel()
-    {
-        if (lostLevelText != null)
-        {
-            lostLevelText.text = "LEVEL " + GameManager.Instance.currentLevel;
-        }
-        lostGamePanel.Open();
-    }
-
-    public void OnNextLevelClick()
-    {
-        winGamePanel.Close();
-        gamePlayPanel.Open();
-        if (LevelManager.Instance != null)
-        {
-            LevelManager.Instance.NextLevel();
+            case UIPanelType.MainMenu: mainMenuPanel.Open(); break;
+            case UIPanelType.GamePlay: gamePlayPanel.Open(); break;
+            case UIPanelType.Loading: loadingPanel.Open(); break;
+            case UIPanelType.Win: winGamePanel.Open(); break;
+            case UIPanelType.Lost: lostGamePanel.Open(); break;
+            case UIPanelType.LevelSelect: levelSelectPanel.Open(); break;
+            case UIPanelType.Settings: settingPanel.Open();break;
         }
     }
 
-    public void OnRetryLevelClick()
-    {
-        winGamePanel.Close();
-        lostGamePanel.Close();
-        gamePlayPanel.Open();
-        if (GameManager.Instance != null)
-        {
-            GameManager.Instance.RestartLevel();
-        }
-    } 
     public void UpdateCurrentLevel(int level)
     {
-        currentLevelText.text = "LEVEL " + level;
-        currentMenuLevelText.text = "LEVEL " + level;
-    }
-
-    public void UpdateLoadingBar(float progess)
-    {
-        if (loadingFill != null)
+        if (currentLevelText != null)
         {
-            loadingFill.fillAmount = progess;
+            currentLevelText.text = "Level " + level.ToString();
+        }
+
+        if (currentMenuLevelText != null)
+        {
+            currentMenuLevelText.text = "level " + level.ToString();
         }
     }
 
-    public void OnLevelSelectButtonClick()
+    public void UpdateLoadingBar(float progress)
     {
-        mainMenuPanel.Close();
-        levelSelectPanel.Open();
-    }
-
-    public void OnCloseLevelSelectClick()
-    {
-        levelSelectPanel.Close();
-        mainMenuPanel.Open();
-    }
-
-    public void OnCloseGamePlayPanel()
-    {
-        if (gamePlayPanel != null)
+        if (loadingPanel != null)
         {
-            gamePlayPanel.Close();
+            loadingPanel.UpdateProgress(progress);
         }
     }
+
+    public void CloseGameplayPanel()
+    {
+        if (gamePlayPanel != null) gamePlayPanel.Close();
+    }
+
+    public IEnumerator CurtainTransition(System.Action onMidWay)
+    {
+        transitionGroup.blocksRaycasts = true;
+        float elapsed = 0;
+
+        while (elapsed < transitionTime)
+        {
+            elapsed += Time.deltaTime;
+            float t = Mathf.SmoothStep(0, 1, elapsed / transitionTime);
+
+            leftCurtain.anchoredPosition = new Vector2(Mathf.Lerp(-offScreenPos, 0, t), 0);
+            rightCurtain.anchoredPosition = new Vector2(Mathf.Lerp(0, -offScreenPos, t), 0);
+            yield return null;
+        }
+
+        onMidWay?.Invoke();
+        yield return new WaitForSeconds(0.2f);
+
+        elapsed = 0;
+        while (elapsed < transitionTime)
+        {
+            elapsed += Time.deltaTime;
+            float t = Mathf.SmoothStep(0, 1, elapsed / transitionTime);
+
+            leftCurtain.anchoredPosition = new Vector2(Mathf.Lerp(0, -offScreenPos, t), 0);
+            rightCurtain.anchoredPosition = new Vector2(Mathf.Lerp(-offScreenPos, 0, t), 0);
+            yield return null;
+        }
+
+        transitionGroup.blocksRaycasts = false;
+    }
+    public void OnPlayButtonClick() => OpenPanel(UIPanelType.GamePlay);
+    public void OnLevelSelectButtonClick() => OpenPanel(UIPanelType.LevelSelect);
+    public void OnSettingButtonClick() => settingPanel.Open();
+    public void OnCloseSettingClick() => settingPanel.Close();
 }
