@@ -71,6 +71,17 @@ public class UIManager : MonoBehaviour
             case UIPanelType.LevelSelect: levelSelectPanel.Open(); break;
             case UIPanelType.Settings: settingPanel.Open();break;
         }
+        if (AudioManager.Instance != null)
+        {
+            if (type == UIPanelType.GamePlay)
+            {
+                AudioManager.Instance.StopMusic();
+            }
+            else
+            {
+                AudioManager.Instance.PlayMusic(AudioManager.Instance.waitingMusic);
+            }
+        }
     }
 
     public void UpdateCurrentLevel(int level)

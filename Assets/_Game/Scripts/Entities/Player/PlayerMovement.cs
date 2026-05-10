@@ -129,7 +129,11 @@ public class PlayerMovement : MonoBehaviour
         isFailing = true;
         transform.position = new Vector3(bridgePos.x, transform.position.y, bridgePos.z);
         targetPos = transform.position;
-
+        
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlaySFX(AudioManager.Instance.lostSfx, 1.0f);
+        }
         UIManager.Instance.OpenPanel(UIPanelType.Lost);
     }
     private void HandleInput()
@@ -335,13 +339,18 @@ public class PlayerMovement : MonoBehaviour
         moveVec = Vector3.zero;
         hasTriggeredWin = false;
 
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlaySFX(AudioManager.Instance.winSfx, 1.0f);
+        }
+
         if (chestTransform != null)
         {
             Vector3 lookDir = (chestTransform.position - transform.position).normalized;
             lookDir.y = 0;
             if (lookDir != Vector3.zero)
             {
-                transform.rotation = Quaternion.Euler(0, 180, 0);
+                transform.rotation = Quaternion.Euler(0, 225, 0);
             }
         }
         ChangePlayerState(winState);

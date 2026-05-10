@@ -53,6 +53,7 @@
     <Compile Include="Assets\_Game\Scripts\Entities\Environment\BridgeStep.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
+    <Compile Include="Assets\_Game\Scripts\Sounds\AudioManager.cs" />
     <Compile Include="Assets\_Game\Scripts\Core\Istate.cs" />
     <Compile Include="Assets\_Game\Scripts\Entities\Player\PlayerMovement.cs" />
     <Compile Include="Assets\_Game\Scripts\Manager\GameManager.cs" />

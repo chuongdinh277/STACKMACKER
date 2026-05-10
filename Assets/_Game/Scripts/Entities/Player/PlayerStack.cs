@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 
 using Unity.Mathematics;
+using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
 public class PlayerStack : MonoBehaviour
 {
@@ -40,6 +41,13 @@ public class PlayerStack : MonoBehaviour
 
         UpdatePlayerHeight();
         LevelManager.RemoveTileData(brickObj.transform.position);
+
+        if (AudioManager.Instance != null)
+        {
+            float currentPitch = 1.0f + (collectedBricks.Count * 0.05f);
+            currentPitch = Mathf.Min(currentPitch, 2.0f);
+            AudioManager.Instance.PlaySFX(AudioManager.Instance.collectBrickSfx, currentPitch);
+        }
     }
 
     public void ClearStack()
@@ -66,7 +74,11 @@ public class PlayerStack : MonoBehaviour
 
             brickToDrop.transform.localPosition = Vector3.zero;
             brickToDrop.transform.localRotation = quaternion.identity;
-
+            
+            if (AudioManager.Instance != null)
+            {
+                AudioManager.Instance.PlaySFX(AudioManager.Instance.collectBrickSfx, 0.5f);
+            }
             UpdatePlayerHeight();
             LevelManager.UpdateTileData(bridgeStepObj.transform.position, TileType.Brick);
             bridgeStepObj.tag = "Untagged";
